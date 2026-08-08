@@ -64,7 +64,7 @@ export default function WorkIndex() {
                           {w.name}
                           <ArrowUpRight
                             size={14}
-                            className="shrink-0 -translate-x-1 translate-y-1 text-ember opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
+                            className="shrink-0 -translate-x-1 translate-y-1 text-ember opacity-0 transition-[transform,opacity] duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
                           />
                         </h2>
                         <p className="mt-1.5 text-sm leading-snug text-paper-dim">{w.tagline}</p>
