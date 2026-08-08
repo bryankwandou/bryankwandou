@@ -51,7 +51,7 @@ export function WorkShowcase({ items }: { items: Work[] }) {
                     </span>
                     <ArrowUpRight
                       size={16}
-                      className={`shrink-0 transition-all duration-300 ${
+                      className={`shrink-0 transition-[transform,opacity,color] duration-300 ${
                         on
                           ? "translate-x-0 -translate-y-0 text-ember opacity-100"
                           : "-translate-x-1 translate-y-1 opacity-0"

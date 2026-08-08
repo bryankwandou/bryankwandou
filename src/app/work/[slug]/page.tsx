@@ -167,7 +167,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
             </div>
             <ArrowRight
               size={22}
-              className="mb-3 text-paper-faint transition-all duration-300 group-hover:translate-x-2 group-hover:text-ember"
+              className="mb-3 text-paper-faint transition-[transform,color] duration-300 group-hover:translate-x-2 group-hover:text-ember"
             />
           </Link>
         </div>
