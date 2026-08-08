@@ -1,69 +1,284 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { profile, roles, communities, skills } from "@/data/profile";
+import { work, featured } from "@/data/work";
+import { Reveal, LineRise, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { WorkShowcase } from "@/components/work-showcase";
+import { Logo } from "@/components/logo";
+
+const shown = featured.map((s) => work.find((w) => w.slug === s)!).filter(Boolean);
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* ------------------------------------------------------------------
+          Opening. Asymmetric on purpose — the mark sits left of the type
+          rather than above it, and nothing is centred.
+         ------------------------------------------------------------------ */}
+      <section className="relative overflow-hidden px-5 pb-24 pt-36 sm:px-8 sm:pb-32 sm:pt-44">
+        {/* A single warm bloom behind the type. No violet, no blue. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-40 -top-40 h-[560px] w-[560px] rounded-full opacity-[0.16] blur-[130px]"
+          style={{ background: "radial-gradient(circle, #E4703A 0%, transparent 68%)" }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+
+        <div className="relative mx-auto max-w-[1180px]">
+          <Reveal>
+            <p className="meta">
+              {profile.location} · {new Date().getFullYear()}
+            </p>
+          </Reveal>
+
+          <h1 className="display mt-8 text-[clamp(2.6rem,8.4vw,5.5rem)] text-paper">
+            <LineRise
+              lines={[
+                <>I build software that</>,
+                <>
+                  leaves a <span className="text-ember">trail</span>.
+                </>,
+              ]}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </h1>
+
+          <div className="mt-10 grid gap-10 md:grid-cols-[1.15fr_1fr] md:gap-16">
+            <Reveal delay={0.34}>
+              <p className="prose-read text-lg">
+                Twenty-one products shipped this year, and the same question sits under
+                every one of them: after the machine acts, can a person still check what
+                happened? Most of my work draws that line and then makes it inspectable
+                by someone who has no reason to trust me.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/work"
+                  className="group inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  See the work
+                  <ArrowRight
+                    size={15}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
+                <Link
+                  href="/about"
+                  className="link-wipe text-sm text-paper-dim transition-colors duration-200 hover:text-paper"
+                >
+                  Read the long version
+                </Link>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.42}>
+              <dl className="grid grid-cols-2 gap-x-6 gap-y-8 border-l border-line pl-8">
+                {profile.stats.map((s) => (
+                  <div key={s.label}>
+                    <dt className="display tnum text-[2.4rem] leading-none text-paper">
+                      {s.value}
+                    </dt>
+                    <dd className="mt-2 text-xs leading-snug text-paper-faint">{s.label}</dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ------------------------------------------------------------------
+          Communities. A slow drift, paused on hover, purely a texture strip.
+         ------------------------------------------------------------------ */}
+      <section className="drift-host relative overflow-hidden border-y border-line py-5">
+        <div className="flex w-max drift">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex shrink-0 items-center" aria-hidden={copy === 1}>
+              {communities.concat(["Superteam Campus", "IDCamp", "Colosseum"]).map((c) => (
+                <span key={`${copy}-${c}`} className="flex items-center">
+                  <span className="meta whitespace-nowrap px-8">{c}</span>
+                  <span className="h-1 w-1 rounded-full bg-ember/45" />
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-ink to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-ink to-transparent" />
+      </section>
+
+      {/* ------------------------------------------------------------------
+          Selected work.
+         ------------------------------------------------------------------ */}
+      <section className="px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-[1180px]">
+          <Reveal>
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="meta">Selected work</p>
+                <h2 className="display mt-4 text-[clamp(2rem,4.6vw,3.2rem)] text-paper">
+                  Six of the twenty-one
+                </h2>
+              </div>
+              <Link
+                href="/work"
+                className="link-wipe pb-0.5 text-sm text-paper-dim transition-colors duration-200 hover:text-paper"
+              >
+                All {work.length} products
+              </Link>
+            </div>
+          </Reveal>
+
+          <div className="mt-14">
+            <WorkShowcase items={shown} />
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------
+          The through-line. Editorial pull-quote, off-centre.
+         ------------------------------------------------------------------ */}
+      <section className="border-y border-line bg-ink-deep px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-[1180px]">
+          <div className="grid gap-12 md:grid-cols-[auto_1fr] md:gap-14">
+            <Reveal>
+              <Logo size={64} />
+            </Reveal>
+            <div>
+              <Reveal delay={0.06}>
+                <p className="display max-w-[22ch] text-[clamp(1.8rem,4vw,2.9rem)] leading-[1.12] text-paper">
+                  The interesting engineering is rarely making the agent smarter. It is
+                  drawing the line the agent cannot cross.
+                </p>
+              </Reveal>
+              <Reveal delay={0.12}>
+                <p className="prose-read mt-8">
+                  Nearly every product on this site is a variation on that. A firewall in
+                  front of execution. A limit held in Rust rather than in a prompt. A
+                  receipt that survives the argument three months later. The pattern
+                  turned up first in payments, then in freight, childcare, home care, and
+                  municipal services — different industries, same missing part.
+                </p>
+              </Reveal>
+              <Reveal delay={0.18}>
+                <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6">
+                  {skills.map((g) => (
+                    <div key={g.group}>
+                      <p className="meta">{g.group}</p>
+                      <p className="mt-2 max-w-[24ch] text-sm text-paper-dim">
+                        {g.items.join(", ")}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------
+          Roles. A ruled index rather than a card grid.
+         ------------------------------------------------------------------ */}
+      <section className="px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-[1180px]">
+          <Reveal>
+            <p className="meta">Where I turn up</p>
+            <h2 className="display mt-4 text-[clamp(2rem,4.6vw,3.2rem)] text-paper">
+              Roles, current and running
+            </h2>
+          </Reveal>
+
+          <StaggerList className="mt-14">
+            {roles.map((r) => (
+              <StaggerItem key={r.org}>
+                <div className="group grid gap-3 border-t border-line py-8 md:grid-cols-[180px_1fr] md:gap-10">
+                  <p className="meta tnum pt-1">{r.period}</p>
+                  <div>
+                    <h3 className="text-lg text-paper">{r.title}</h3>
+                    <p className="mt-1 text-sm text-ember">{r.org}</p>
+                    <p className="prose-read mt-4 text-sm">{r.summary}</p>
+                    <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                      {r.points.map((p) => (
+                        <li key={p} className="flex gap-2.5 text-sm text-paper-faint">
+                          <span className="mt-[0.6em] h-px w-3 shrink-0 bg-line-strong" />
+                          <span>{p}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerList>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------
+          Archive teaser.
+         ------------------------------------------------------------------ */}
+      <section className="px-5 pb-8 sm:px-8">
+        <div className="mx-auto max-w-[1180px]">
+          <Reveal>
+            <Link
+              href="/archive"
+              className="group block rounded-lg border border-line bg-ink-raised p-8 transition-colors duration-300 hover:border-line-strong sm:p-12"
+            >
+              <div className="flex flex-wrap items-end justify-between gap-8">
+                <div>
+                  <p className="meta">The rest of it</p>
+                  <p className="display mt-4 max-w-[20ch] text-[clamp(1.7rem,3.6vw,2.5rem)] text-paper">
+                    Another eighty-odd repositories, public and unpolished
+                  </p>
+                  <p className="prose-read mt-4 text-sm">
+                    Post-quantum chain experiments, a water tanker system for the city
+                    utility, an editor rebuilt in the browser, and a browser game I made
+                    to remember what building without a compliance requirement feels like.
+                  </p>
+                </div>
+                <span className="inline-flex items-center gap-2 text-sm text-paper transition-colors duration-300 group-hover:text-ember">
+                  Open the archive
+                  <ArrowRight
+                    size={15}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </span>
+              </div>
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------
+          Close.
+         ------------------------------------------------------------------ */}
+      <section className="px-5 pt-24 sm:px-8 sm:pt-32">
+        <div className="mx-auto max-w-[1180px]">
+          <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+            <Reveal>
+              <p className="meta">Open to</p>
+              <h2 className="display mt-4 max-w-[16ch] text-[clamp(2.2rem,6vw,4rem)] text-paper">
+                Work worth putting my name on.
+              </h2>
+              <p className="prose-read mt-6">
+                Collaboration on agentic infrastructure, Solana work, or anything where
+                the accountability question is the hard part. Also photography, and
+                anything to do with building a community from nothing.
+              </p>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <a
+                href={`mailto:${profile.email}`}
+                className="group inline-flex items-center gap-2 rounded-full bg-ember px-7 py-3.5 text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                {profile.email}
+                <ArrowRight
+                  size={15}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </a>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

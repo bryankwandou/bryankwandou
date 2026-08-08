@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="AxleVeto logo">
+  <rect width="96" height="96" rx="22" fill="#101311"/>
+  <rect x="0.75" y="0.75" width="94.5" height="94.5" rx="21.4" fill="none" stroke="#f2f2ee" stroke-opacity="0.28" stroke-width="1.5"/>
+  <text x="48" y="49" text-anchor="middle" dominant-baseline="central"
+        font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace"
+        font-size="34" font-weight="650" letter-spacing="-1.2" fill="#f2f2ee">AV</text>
+  <rect x="26" y="72" width="44" height="3" rx="1.5" fill="#f2f2ee" fill-opacity="0.55"/>
+</svg>
