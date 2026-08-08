@@ -1,0 +1,205 @@
+// Every field below traces to a public source: the LinkedIn profile export,
+// the GitHub account, the Instagram and Threads profiles, or the ORCID registry.
+// Nothing here is invented.
+
+export const profile = {
+  name: "Bryan Kwandou",
+  legalName: "Vincentius Bryan Kwandou",
+  handle: "nayrbryanGaming",
+  role: "Content creator, web developer, esports organiser",
+  location: "Makassar, South Sulawesi, Indonesia",
+  origin: "Jayapura, Indonesia",
+  pronouns: "he/him",
+  orcid: "0009-0009-1652-0995",
+  email: "vincentius.kwandou@gmail.com",
+  avatar: "https://avatars.githubusercontent.com/u/263014785?v=4",
+
+  // Written for the site. The source material is the LinkedIn summary; the
+  // phrasing here is my own and deliberately drops the resume register.
+  lede:
+    "I build software that leaves a trail. Twenty-one products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened?",
+
+  bio: [
+    "I started in gaming in 2010, which is a long time before any of this looked like a career. NNG Esport came out of that — a grassroots thing I put together because the players around me had nowhere organised to compete. Running it taught me more about audiences, brand, and keeping a community alive than any course has since.",
+    "The building came later and it came fast. I read computer science at Universitas Atma Jaya Makassar, and somewhere between coursework and hackathons I found the problem I keep circling: autonomous systems are getting very good at doing things and very bad at being accountable for them. So most of what I ship now puts a hard boundary around the machine and a receipt on the other side of it.",
+    "I still shoot photographs. I still release NFT work on Tezos and Drip.Haus. I founded the university esports body and I lead the campus blockchain club. These read like unrelated columns on a CV, but they are one habit — find a group of people with no infrastructure, and build them some.",
+  ],
+
+  // Counts are computed from the public GitHub account, checked 6 August 2026.
+  stats: [
+    { value: "104", label: "public repositories" },
+    { value: "21", label: "products with live deployments" },
+    { value: "2010", label: "building communities since" },
+    { value: "4", label: "chains shipped against" },
+  ],
+
+  links: [
+    { label: "GitHub", href: "https://github.com/bryankwandou", handle: "bryankwandou" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/bryankwandou", handle: "bryankwandou" },
+    { label: "Instagram", href: "https://instagram.com/bryan_kwandou", handle: "bryan_kwandou" },
+    { label: "Threads", href: "https://threads.com/@bryan_kwandou", handle: "bryan_kwandou" },
+    { label: "TikTok", href: "https://tiktok.com/@nayrbryanGaming", handle: "nayrbryanGaming" },
+    { label: "X", href: "https://x.com/nayrbryanGaming", handle: "nayrbryanGaming" },
+    { label: "ORCID", href: "https://orcid.org/0009-0009-1652-0995", handle: "0009-0009-1652-0995" },
+    { label: "Email", href: "mailto:vincentius.kwandou@gmail.com", handle: "vincentius.kwandou@gmail.com" },
+  ],
+} as const;
+
+export type Role = {
+  org: string;
+  title: string;
+  start: string;
+  end: string;
+  period: string;
+  place: string;
+  summary: string;
+  points: string[];
+};
+
+// Source: LinkedIn profile export, August 2026.
+export const roles: Role[] = [
+  {
+    org: "UAJM Blockchain Club — Superteam Campus",
+    title: "Campus Lead, Founder",
+    start: "2026-03",
+    end: "",
+    period: "Mar 2026 — now",
+    place: "Makassar",
+    summary:
+      "I started the Superteam campus chapter at Universitas Atma Jaya Makassar to give students a route into Web3 that does not begin with a price chart.",
+    points: [
+      "Run the teaching sessions on blockchain and decentralised systems",
+      "Connect students on campus to the wider Superteam ecosystem",
+      "Host workshops, meetups, and open discussion nights",
+      "Push members toward building something rather than only reading about it",
+    ],
+  },
+  {
+    org: "UKM E-Sport Universitas Atma Jaya Makassar",
+    title: "Founder, Chairman",
+    start: "2025-09",
+    end: "",
+    period: "Sep 2025 — now",
+    place: "Makassar",
+    summary:
+      "I founded the university's official esports body, formalised under Rector Decree 032/UAJM/Rek/Kep/VI/2025, and chair it across four divisions.",
+    points: [
+      "Four divisions under me: tournaments, training and development, creative media, public relations",
+      "Weekly scrims, workshops, and a talent pathway for student players",
+      "Took the community from nothing to more than twenty members inside the first months",
+      "Set the motto the organisation runs on — Main Cerdas, Menang Bermartabat",
+    ],
+  },
+  {
+    org: "MANCER",
+    title: "Web3 Developer Scholar",
+    start: "2026-04",
+    end: "2026-06",
+    period: "Apr — Jun 2026",
+    place: "Remote",
+    summary:
+      "Selected for the Mancer and Superteam Web3 Career Accelerator on the developer track.",
+    points: [
+      "Built blockchain applications against real technical briefs",
+      "Worked through Solana tooling and protocol internals",
+      "Completed the technical challenges and work trials the programme sets",
+    ],
+  },
+  {
+    org: "Drip Labs",
+    title: "NFT Creator, Drip.Haus",
+    start: "2024-03",
+    end: "",
+    period: "Mar 2024 — now",
+    place: "Solana",
+    summary:
+      "Weekly drops on Drip.Haus, with the visual work assembled through AI-assisted tooling and my own art direction.",
+    points: [
+      "Ship on a weekly release cadence",
+      "Hold a collector base together through perks and rarity design",
+      "Take part in contests and collaborations inside the Solana creator scene",
+    ],
+  },
+  {
+    org: "Tezos",
+    title: "Web3 Content Creator, NFT Artist",
+    start: "2022-01",
+    end: "",
+    period: "Jan 2022 — now",
+    place: "Objkt",
+    summary:
+      "Generative and AI-assisted work published on Tezos through Objkt, running for four years now.",
+    points: [
+      "Several collections out, with collectors who have stayed across releases",
+      "Collaborated with artists and Web3 communities outside Indonesia",
+      "Built the visual identity that still runs under the nayrbryanGaming name",
+      "Work sits in prompt engineering, image generation, and visual narrative",
+    ],
+  },
+  {
+    org: "NNG Esport",
+    title: "Founder",
+    start: "2010",
+    end: "",
+    period: "Since 2010",
+    place: "Indonesia",
+    summary:
+      "The first thing I ever built. A grassroots esports outfit for players and creators who had no organised place to compete.",
+    points: [
+      "Where the community-building habit started",
+      "Shaped how I think about audience, engagement, and brand",
+      "Still the name attached to most of my creative output",
+    ],
+  },
+];
+
+// Source: LinkedIn profile export, August 2026.
+export const education = [
+  {
+    school: "Universitas Atma Jaya Makassar",
+    detail: "S1 Teknik Informatika",
+    period: "Sep 2023 — Jul 2027",
+  },
+  {
+    school: "SMA Negeri 1 Makassar",
+    detail: "IPA",
+    period: "Jun 2020 — Mar 2023",
+  },
+  {
+    school: "SMP Katolik Rajawali",
+    detail: "IPA",
+    period: "Aug 2017 — Aug 2020",
+  },
+  {
+    school: "SD Menara Makassar",
+    detail: "IPA",
+    period: "Jul 2012 — Jul 2017",
+  },
+];
+
+// Source: LinkedIn certifications section (Dicoding).
+export const certifications = [
+  "Belajar Dasar Data Science",
+  "Belajar Dasar UX Design",
+  "Prompt Engineering untuk Software Developer",
+  "Memulai Pemrograman dengan Python",
+  "Belajar Back-End Pemula dengan Python",
+];
+
+// Source: LinkedIn top skills, plus languages observed across the public repos.
+export const skills = [
+  { group: "Chain", items: ["Solana", "Anchor", "Rust", "Tezos", "Solidity", "SPL"] },
+  { group: "Product", items: ["TypeScript", "Next.js", "React", "Tailwind", "Node"] },
+  { group: "Mobile", items: ["Flutter", "Dart"] },
+  { group: "Systems", items: ["Postgres", "wasm32-wasip2", "Groq", "Python"] },
+  { group: "Craft", items: ["Photography", "Art direction", "Prompt engineering", "Community"] },
+];
+
+// Source: Instagram story highlights, @bryan_kwandou.
+export const communities = [
+  "Superteam",
+  "PIDI DIGDAYA",
+  "MyBCA Academy",
+  "GDG Telkom",
+  "NOVO CLUB",
+];

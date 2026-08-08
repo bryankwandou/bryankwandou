@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------
+   Tier 1 — brand seeds. Warm greys, one ember accent.
+   Documented in brand.md. Nothing else in the codebase invents colour.
+   --------------------------------------------------------------- */
+@theme {
+  --color-ink: #121110;
+  --color-ink-raised: #191817;
+  --color-ink-panel: #201e1c;
+  --color-ink-deep: #0d0c0b;
+
+  --color-paper: #f5f1ea;
+  --color-paper-dim: #a9a29a;
+  --color-paper-faint: #6e6862;
+
+  --color-ember: #e4703a;
+  --color-ember-lit: #f08a56;
+  --color-signal: #57997a;
+
+  --color-line: rgba(245, 241, 234, 0.08);
+  --color-line-strong: rgba(245, 241, 234, 0.16);
+
+  --font-display: var(--font-instrument), Georgia, serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* 12 / 13 / 15 / 17 / 21 / 28 / 40 / 60 / 88 */
+  --text-2xs: 0.75rem;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.3125rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: 3.75rem;
+  --text-4xl: 5.5rem;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  /* Anchored sections should not sit flush under the fixed rail. */
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ember);
+  color: var(--color-ink);
+}
+
+/* A single visible focus treatment, applied only for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--color-ember);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Numbers in tables and metadata must not shift width as they change. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ---------------------------------------------------------------
+   Type roles
+   --------------------------------------------------------------- */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-paper-faint);
+}
+
+.prose-read {
+  max-width: 62ch;
+  line-height: 1.72;
+  color: var(--color-paper-dim);
+}
+.prose-read strong {
+  color: var(--color-paper);
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------------
+   Page grain. A very low-opacity noise field keeps the large flat
+   dark areas from banding on cheap panels. Purely a surface fix.
+   --------------------------------------------------------------- */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------
+   Rules and dividers — hairlines that fade rather than stop dead.
+   --------------------------------------------------------------- */
+.rule-fade {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-line-strong) 12%,
+    var(--color-line-strong) 88%,
+    transparent
+  );
+}
+
+/* ---------------------------------------------------------------
+   Underline that grows from the left on hover. Used on index rows.
+   --------------------------------------------------------------- */
+.link-wipe {
+  background-image: linear-gradient(var(--color-ember), var(--color-ember));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 280ms var(--ease-out-quint);
+}
+.link-wipe:hover,
+.link-wipe:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* ---------------------------------------------------------------
+   Marquee for the community strip.
+   --------------------------------------------------------------- */
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.drift {
+  animation: drift 42s linear infinite;
+}
+.drift-host:hover .drift {
+  animation-play-state: paused;
+}
+
+/* Slow pulse on the live status dot. */
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+.breathe {
+  animation: breathe 2.6s var(--ease-out-quint) infinite;
+}
+
+/* ---------------------------------------------------------------
+   Respect the system preference. Anything decorative stops; anything
+   that communicates state is reduced to a fade rather than removed.
+   --------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar, dark-field appropriate. */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2926;
+  border-radius: 99px;
+  border: 3px solid var(--color-ink-deep);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3934;
 }
