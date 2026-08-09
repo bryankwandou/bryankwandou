@@ -1,0 +1,57 @@
+name: Deploy to Vercel
+
+# Pushes to master go straight to production. Nothing else triggers a deploy —
+# in particular there is no pull_request trigger, so a fork can never open a PR
+# that reaches the credentials below.
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# One deploy at a time. A newer push cancels an in-flight older one rather than
+# racing it to production.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull project settings
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Deploying is not the same as working. Check the real URL answers.
+      - name: Verify production routes
+        run: |
+          sleep 10
+          fail=0
+          for path in "/" "/work" "/about" "/archive" "/work/veylock" "/sitemap.xml"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -m 30 "https://bryankwandou.vercel.app${path}")
+            echo "${path} -> ${code}"
+            [ "$code" = "200" ] || fail=1
+          done
+          exit $fail
