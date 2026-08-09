@@ -1,11 +1,24 @@
 name: Deploy to Vercel
 
-# Pushes to master go straight to production. Nothing else triggers a deploy —
-# in particular there is no pull_request trigger, so a fork can never open a PR
-# that reaches the credentials below.
+# Manual trigger only, for now.
+#
+# Deploying on push needs a Vercel *personal access token*. The token the local
+# `vercel` CLI stores is an OAuth credential scoped to the CLI itself — it is
+# rejected by `--token` and cannot mint a personal token through the API, which
+# is deliberate on Vercel's side. So the token has to be created by hand:
+#
+#   1. vercel.com → Settings → Tokens → Create, scoped to this project
+#   2. gh secret set VERCEL_TOKEN --repo bryankwandou/bryankwandou
+#   3. add the push trigger back:
+#        push:
+#          branches: [master]
+#
+# Until then, deploy from the machine with:
+#   vercel deploy --prod --yes --scope nayrbryangamings-projects
+#
+# Note there is deliberately no pull_request trigger. The repo is public, and a
+# push-only trigger keeps fork PRs away from the credentials below.
 on:
-  push:
-    branches: [master]
   workflow_dispatch:
 
 # One deploy at a time. A newer push cancels an in-flight older one rather than
