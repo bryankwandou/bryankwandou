@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { profile, roles, communities, skills } from "@/data/profile";
 import { work, featured } from "@/data/work";
+import { craft } from "@/data/journey";
 import { Reveal, LineRise, StaggerList, StaggerItem } from "@/components/motion-primitives";
 import { WorkShowcase } from "@/components/work-showcase";
 import { Logo } from "@/components/logo";
@@ -61,7 +62,7 @@ export default function Home() {
                   />
                 </Link>
                 <Link
-                  href="/about"
+                  href="/journey"
                   className="link-wipe text-sm text-paper-dim transition-colors duration-200 hover:text-paper"
                 >
                   Read the long version
@@ -171,6 +172,53 @@ export default function Home() {
                 </div>
               </Reveal>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------
+          The creative half. Engineering produces artefacts with URLs, so it
+          dominates this site by default. This corrects the record.
+         ------------------------------------------------------------------ */}
+      <section className="px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-[1180px]">
+          <div className="grid gap-12 md:grid-cols-[1fr_1.15fr] md:gap-16">
+            <Reveal>
+              <p className="meta">Before the code</p>
+              <h2 className="display mt-4 max-w-[15ch] text-[clamp(2rem,4.6vw,3.2rem)] text-paper">
+                A camera, and a room full of players
+              </h2>
+              <p className="prose-read mt-6">
+                I ran an esports outfit before I could write a line of production code,
+                and I have been publishing art on chain since 2022. Neither stopped when
+                the engineering started. One of the products on this site exists purely
+                because I got tired of culling my own photographs.
+              </p>
+              <Link
+                href="/journey"
+                className="group mt-8 inline-flex items-center gap-2 text-sm text-paper transition-colors duration-300 hover:text-ember"
+              >
+                The whole arc, 2010 to now
+                <ArrowRight
+                  size={15}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
+            </Reveal>
+
+            <StaggerList className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
+              {craft.map((c) => (
+                <StaggerItem key={c.title}>
+                  <div className="border-t border-line pt-5">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="text-base text-paper">{c.title}</h3>
+                      <span className="meta shrink-0">{c.meta}</span>
+                    </div>
+                    <p className="prose-read mt-2.5 text-sm">{c.detail}</p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerList>
           </div>
         </div>
       </section>

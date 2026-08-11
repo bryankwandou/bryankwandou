@@ -23,6 +23,7 @@ export function SiteFooter() {
               {[
                 ["/", "Home"],
                 ["/work", "Work"],
+                ["/journey", "Journey"],
                 ["/about", "About"],
                 ["/archive", "Archive"],
               ].map(([href, label]) => (
