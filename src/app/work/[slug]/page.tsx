@@ -4,8 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { work, workBySlug } from "@/data/work";
+import { proofs } from "@/data/proof";
 import { Reveal } from "@/components/motion-primitives";
 import { StatusTag } from "@/components/status-tag";
+import { ProofPanel } from "@/components/proof-panel";
 
 export function generateStaticParams() {
   return work.map((w) => ({ slug: w.slug }));
@@ -37,6 +39,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
 
   const index = work.findIndex((x) => x.slug === slug);
   const next = work[(index + 1) % work.length];
+  const proof = proofs[slug];
 
   return (
     <>
@@ -126,6 +129,26 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
           </div>
         </div>
       </section>
+
+      {/* Evidence. Only rendered where the project's own README states an
+          artefact — nothing is padded out to make a page look fuller. */}
+      {proof && (
+        <section className="border-y border-line bg-ink-deep px-5 py-20 sm:px-8 sm:py-24">
+          <div className="mx-auto max-w-[1180px]">
+            <Reveal>
+              <div className="grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:gap-16">
+                <div>
+                  <p className="meta">Evidence</p>
+                  <h2 className="display mt-4 max-w-[16ch] text-[clamp(1.7rem,3.6vw,2.4rem)] text-paper">
+                    The part you do not have to take on trust
+                  </h2>
+                </div>
+                <ProofPanel proof={proof} />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {/* Captures. Full-bleed-ish, staggered widths so it reads as a spread
           rather than a uniform grid. */}
