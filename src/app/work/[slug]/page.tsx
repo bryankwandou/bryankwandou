@@ -13,6 +13,13 @@ export function generateStaticParams() {
   return work.map((w) => ({ slug: w.slug }));
 }
 
+/**
+ * The product set is closed and fully known at build time. Without this, the
+ * build still emits a dynamic-segment fallback it has no lambda for, and the
+ * deployment fails with "Unable to find lambda for route".
+ */
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
