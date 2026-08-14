@@ -5,16 +5,19 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Logo } from "./logo";
+import { LangToggle, useLang } from "./lang-provider";
+import type { Key } from "@/i18n/dict";
 
-const NAV = [
-  { href: "/work", label: "Work" },
-  { href: "/journey", label: "Journey" },
-  { href: "/about", label: "About" },
-  { href: "/archive", label: "Archive" },
+const NAV: { href: string; key: Key }[] = [
+  { href: "/work", key: "nav.work" },
+  { href: "/journey", key: "nav.journey" },
+  { href: "/about", key: "nav.about" },
+  { href: "/archive", key: "nav.archive" },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { t } = useLang();
   const [lifted, setLifted] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -44,6 +47,7 @@ export function SiteHeader() {
       </a>
 
       <header
+        data-site-header
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
           lifted
             ? "border-b border-line bg-ink/78 backdrop-blur-xl"
@@ -69,7 +73,7 @@ export function SiteHeader() {
                     active ? "text-paper" : "text-paper-dim hover:text-paper"
                   }`}
                 >
-                  {item.label}
+                  {t(item.key)}
                   {active && (
                     <motion.span
                       layoutId="nav-dot"
@@ -80,6 +84,7 @@ export function SiteHeader() {
                 </Link>
               );
             })}
+            <LangToggle className="ml-3" />
             <a
               href="mailto:vincentius.kwandou@gmail.com"
               className="ml-3 rounded-full border border-line-strong px-4 py-1.5 text-sm text-paper transition-colors duration-200 hover:border-ember hover:text-ember"
@@ -88,9 +93,11 @@ export function SiteHeader() {
             </a>
           </nav>
 
-          <button
+          <div className="flex items-center gap-2 sm:hidden">
+            <LangToggle />
+            <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center sm:hidden"
+            className="flex h-9 w-9 items-center justify-center"
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
           >
@@ -106,7 +113,8 @@ export function SiteHeader() {
                 transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
               />
             </span>
-          </button>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -131,7 +139,7 @@ export function SiteHeader() {
                     href={item.href}
                     className="display block border-b border-line py-5 text-[2rem] text-paper"
                   >
-                    {item.label}
+                    {t(item.key)}
                   </Link>
                 </motion.div>
               ))}

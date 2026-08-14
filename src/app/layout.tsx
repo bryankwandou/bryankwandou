@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { LangProvider } from "@/components/lang-provider";
 import { profile } from "@/data/profile";
 import "./globals.css";
 
@@ -93,11 +94,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        <SiteHeader />
-        <main id="main" className="relative z-10">
-          {children}
-        </main>
-        <SiteFooter />
+        <LangProvider>
+          <SiteHeader />
+          <main id="main" className="relative z-10">
+            {children}
+          </main>
+          <SiteFooter />
+        </LangProvider>
       </body>
     </html>
   );

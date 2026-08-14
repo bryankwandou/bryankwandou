@@ -1,5 +1,8 @@
 import { ImageResponse } from "next/og";
 
+// Required under `output: export` — the card is generated once at build time.
+export const dynamic = "force-static";
+
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Bryan Kwandou — builder, Makassar";

@@ -5,7 +5,7 @@ import { Logo } from "./logo";
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 mt-32 border-t border-line">
+    <footer data-site-footer className="relative z-10 mt-32 border-t border-line">
       <div className="mx-auto max-w-[1180px] px-5 py-16 sm:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
@@ -26,6 +26,7 @@ export function SiteFooter() {
                 ["/journey", "Journey"],
                 ["/about", "About"],
                 ["/archive", "Archive"],
+                ["/cv", "CV"],
               ].map(([href, label]) => (
                 <li key={href}>
                   <Link

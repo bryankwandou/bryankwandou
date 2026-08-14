@@ -86,7 +86,7 @@ export function WorkShowcase({ items }: { items: Work[] }) {
                 transition={{ duration: 0.34, ease: EASE }}
               >
                 <Image
-                  src={`/shots/${current.slug}-1.png`}
+                  src={`/shots/${current.slug}-1.webp`}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 520px"

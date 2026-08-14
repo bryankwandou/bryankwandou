@@ -169,7 +169,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
                 }`}
               >
                 <Image
-                  src={`/shots/${w.slug}-${n}.png`}
+                  src={`/shots/${w.slug}-${n}.webp`}
                   alt={`${w.name}, screen ${n} of ${w.shots}`}
                   width={1600}
                   height={1000}
