@@ -29,7 +29,10 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      # Not `npm ci`: the lock file is generated on Windows and cannot contain
+      # the Linux-only optional binaries (@emnapi/*) that npm resolves here, so
+      # a clean install always reports the tree as out of sync.
+      - run: npm install --no-audit --no-fund
 
       # Pages serves this repo from /bryankwandou/, not the domain root.
       - run: npm run build
