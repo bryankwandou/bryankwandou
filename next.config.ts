@@ -10,8 +10,20 @@ import type { NextConfig } from "next";
  * authored. They are 1440x900 PNGs averaging ~136 KB, loaded lazily below the
  * fold, which is an acceptable cost for a site that deploys reliably.
  */
+/**
+ * GitHub Pages serves this repo from /bryankwandou/, so assets need a prefix
+ * there. Vercel serves it from the root and must not have one. The workflow
+ * sets PAGES_BASE_PATH; nothing else does.
+ */
+const basePath = process.env.PAGES_BASE_PATH || "";
+
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: basePath || undefined,
+  assetPrefix: basePath || undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },
