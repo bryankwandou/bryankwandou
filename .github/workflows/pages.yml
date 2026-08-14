@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+# Vercel deployments for this project have been stalling at UNKNOWN status
+# since 8 August 2026 — uploads complete, builds never finalise. The site is a
+# pure static export, so Pages serves it identically and gives us deploy-on-push
+# without needing a Vercel access token.
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      # Pages serves the files as-is; Jekyll would otherwise strip _next/.
+      - run: touch out/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Fail loudly rather than reporting a green tick on a broken site.
+      - name: Verify routes
+        run: |
+          base="${{ steps.deployment.outputs.page_url }}"
+          base="${base%/}"
+          fail=0
+          for path in "" /work /journey /about /archive /cv /work/veylock; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 5 --retry-delay 6 --retry-all-errors "$base$path")
+            echo "$path -> $code"
+            [ "$code" = "200" ] || fail=1
+          done
+          exit $fail
