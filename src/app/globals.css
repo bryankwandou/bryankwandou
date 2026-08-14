@@ -218,3 +218,78 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #3d3934;
 }
+
+/* ---------------------------------------------------------------------------
+   Print. The screen theme is dark; paper is not. Everything inverts to ink on
+   white, chrome is removed, and blocks are kept off page breaks.
+   --------------------------------------------------------------------------- */
+@media print {
+  .cv-hide-print,
+  header[data-site-header],
+  footer[data-site-footer] {
+    display: none !important;
+  }
+
+  html,
+  body,
+  .cv-page {
+    background: #ffffff !important;
+    color: #17150f !important;
+  }
+
+  /* The grain overlay costs toner and adds nothing on paper. */
+  body::after {
+    display: none !important;
+  }
+
+  .cv-page {
+    padding: 0 !important;
+  }
+
+  .cv-page .text-paper,
+  .cv-page .display,
+  .cv-page h1,
+  .cv-page h2,
+  .cv-page h3 {
+    color: #17150f !important;
+  }
+
+  .cv-page .text-paper-dim,
+  .cv-page .prose-read {
+    color: #3d372e !important;
+  }
+
+  .cv-page .text-paper-faint,
+  .cv-page .meta {
+    color: #5c554a !important;
+  }
+
+  .cv-page .text-ember {
+    color: #9a4416 !important;
+  }
+
+  .cv-page .border-line,
+  .cv-page .border-b,
+  .cv-page .border-t {
+    border-color: #d6cfc4 !important;
+  }
+
+  .cv-page .bg-line-strong {
+    background: #8a8377 !important;
+  }
+
+  /* Never split a role or a school across two sheets. */
+  .cv-block,
+  .cv-page section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .cv-page a {
+    text-decoration: none !important;
+  }
+
+  @page {
+    margin: 16mm 14mm;
+  }
+}

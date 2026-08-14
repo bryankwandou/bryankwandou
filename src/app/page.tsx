@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { profile, roles, communities, skills } from "@/data/profile";
@@ -6,10 +8,12 @@ import { craft } from "@/data/journey";
 import { Reveal, LineRise, StaggerList, StaggerItem } from "@/components/motion-primitives";
 import { WorkShowcase } from "@/components/work-showcase";
 import { Logo } from "@/components/logo";
+import { useLang } from "@/components/lang-provider";
 
 const shown = featured.map((s) => work.find((w) => w.slug === s)!).filter(Boolean);
 
 export default function Home() {
+  const { t } = useLang();
   return (
     <>
       {/* ------------------------------------------------------------------
@@ -34,9 +38,9 @@ export default function Home() {
           <h1 className="display mt-8 text-[clamp(2.6rem,8.4vw,5.5rem)] text-paper">
             <LineRise
               lines={[
-                <>I build software that</>,
+                <>{t("home.hero.1")}</>,
                 <>
-                  leaves a <span className="text-ember">trail</span>.
+                  {t("home.hero.2a")}<span className="text-ember">{t("home.hero.2b")}</span>.
                 </>,
               ]}
             />
@@ -45,17 +49,14 @@ export default function Home() {
           <div className="mt-10 grid gap-10 md:grid-cols-[1.15fr_1fr] md:gap-16">
             <Reveal delay={0.34}>
               <p className="prose-read text-lg">
-                Twenty-one products shipped this year, and the same question sits under
-                every one of them: after the machine acts, can a person still check what
-                happened? Most of my work draws that line and then makes it inspectable
-                by someone who has no reason to trust me.
+                {t("home.lede")}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   href="/work"
                   className="group inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  See the work
+                  {t("home.cta.work")}
                   <ArrowRight
                     size={15}
                     className="transition-transform duration-300 group-hover:translate-x-1"
@@ -65,7 +66,7 @@ export default function Home() {
                   href="/journey"
                   className="link-wipe text-sm text-paper-dim transition-colors duration-200 hover:text-paper"
                 >
-                  Read the long version
+                  {t("home.cta.long")}
                 </Link>
               </div>
             </Reveal>
@@ -114,16 +115,16 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-6">
               <div>
-                <p className="meta">Selected work</p>
+                <p className="meta">{t("home.selected.eyebrow")}</p>
                 <h2 className="display mt-4 text-[clamp(2rem,4.6vw,3.2rem)] text-paper">
-                  Six of the twenty-one
+                  {t("home.selected.title")}
                 </h2>
               </div>
               <Link
                 href="/work"
                 className="link-wipe pb-0.5 text-sm text-paper-dim transition-colors duration-200 hover:text-paper"
               >
-                All {work.length} products
+                {t("home.selected.all", { n: work.length })}
               </Link>
             </div>
           </Reveal>
@@ -146,18 +147,13 @@ export default function Home() {
             <div>
               <Reveal delay={0.06}>
                 <p className="display max-w-[22ch] text-[clamp(1.8rem,4vw,2.9rem)] leading-[1.12] text-paper">
-                  The interesting engineering is rarely making the agent smarter. It is
-                  drawing the line the agent cannot cross.
-                </p>
+                  {t("home.quote")}
+              </p>
               </Reveal>
               <Reveal delay={0.12}>
                 <p className="prose-read mt-8">
-                  Nearly every product on this site is a variation on that. A firewall in
-                  front of execution. A limit held in Rust rather than in a prompt. A
-                  receipt that survives the argument three months later. The pattern
-                  turned up first in payments, then in freight, childcare, home care, and
-                  municipal services — different industries, same missing part.
-                </p>
+                  {t("home.quote.body")}
+              </p>
               </Reveal>
               <Reveal delay={0.18}>
                 <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6">
@@ -184,21 +180,18 @@ export default function Home() {
         <div className="mx-auto max-w-[1180px]">
           <div className="grid gap-12 md:grid-cols-[1fr_1.15fr] md:gap-16">
             <Reveal>
-              <p className="meta">Before the code</p>
+              <p className="meta">{t("home.craft.eyebrow")}</p>
               <h2 className="display mt-4 max-w-[15ch] text-[clamp(2rem,4.6vw,3.2rem)] text-paper">
-                A camera, and a room full of players
+                {t("home.craft.title")}
               </h2>
               <p className="prose-read mt-6">
-                I ran an esports outfit before I could write a line of production code,
-                and I have been publishing art on chain since 2022. Neither stopped when
-                the engineering started. One of the products on this site exists purely
-                because I got tired of culling my own photographs.
+                {t("home.craft.body")}
               </p>
               <Link
                 href="/journey"
                 className="group mt-8 inline-flex items-center gap-2 text-sm text-paper transition-colors duration-300 hover:text-ember"
               >
-                The whole arc, 2010 to now
+                {t("home.craft.link")}
                 <ArrowRight
                   size={15}
                   className="transition-transform duration-300 group-hover:translate-x-1"
@@ -229,9 +222,9 @@ export default function Home() {
       <section className="px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Where I turn up</p>
+            <p className="meta">{t("home.roles.eyebrow")}</p>
             <h2 className="display mt-4 text-[clamp(2rem,4.6vw,3.2rem)] text-paper">
-              Roles, current and running
+              {t("home.roles.title")}
             </h2>
           </Reveal>
 
@@ -272,18 +265,16 @@ export default function Home() {
             >
               <div className="flex flex-wrap items-end justify-between gap-8">
                 <div>
-                  <p className="meta">The rest of it</p>
+                  <p className="meta">{t("home.archive.eyebrow")}</p>
                   <p className="display mt-4 max-w-[20ch] text-[clamp(1.7rem,3.6vw,2.5rem)] text-paper">
                     Another eighty-odd repositories, public and unpolished
                   </p>
                   <p className="prose-read mt-4 text-sm">
-                    Post-quantum chain experiments, a water tanker system for the city
-                    utility, an editor rebuilt in the browser, and a browser game I made
-                    to remember what building without a compliance requirement feels like.
-                  </p>
+                    {t("home.archive.body")}
+              </p>
                 </div>
                 <span className="inline-flex items-center gap-2 text-sm text-paper transition-colors duration-300 group-hover:text-ember">
-                  Open the archive
+                  {t("home.archive.cta")}
                   <ArrowRight
                     size={15}
                     className="transition-transform duration-300 group-hover:translate-x-1"
@@ -302,14 +293,12 @@ export default function Home() {
         <div className="mx-auto max-w-[1180px]">
           <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
             <Reveal>
-              <p className="meta">Open to</p>
+              <p className="meta">{t("home.close.eyebrow")}</p>
               <h2 className="display mt-4 max-w-[16ch] text-[clamp(2.2rem,6vw,4rem)] text-paper">
-                Work worth putting my name on.
+                {t("home.close.title")}
               </h2>
               <p className="prose-read mt-6">
-                Collaboration on agentic infrastructure, Solana work, or anything where
-                the accountability question is the hard part. Also photography, and
-                anything to do with building a community from nothing.
+                {t("home.close.body")}
               </p>
             </Reveal>
             <Reveal delay={0.08}>

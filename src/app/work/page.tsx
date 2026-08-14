@@ -41,7 +41,7 @@ export default function WorkIndex() {
                   <Link href={`/work/${w.slug}`} className="block">
                     <div className="relative aspect-[16/11] overflow-hidden rounded-md border border-line bg-ink-raised">
                       <Image
-                        src={`/shots/${w.slug}-1.png`}
+                        src={`/shots/${w.slug}-1.webp`}
                         alt={`${w.name} interface`}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"

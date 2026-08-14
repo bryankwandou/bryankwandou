@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
+/**
+ * Every route here is prerendered — there is no server work at request time.
+ * Exporting statically says so explicitly, which also sidesteps @vercel/next's
+ * serverBuild insisting on a lambda for the /work/[slug] segment
+ * (NEXT_MISSING_LAMBDA) even when all 21 pages are already built.
+ *
+ * The trade is next/image's on-demand optimisation, so the screenshots ship as
+ * authored. They are 1440x900 PNGs averaging ~136 KB, loaded lazily below the
+ * fold, which is an acceptable cost for a site that deploys reliably.
+ */
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
