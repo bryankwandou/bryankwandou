@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { profile, roles, education, certifications, skills } from "@/data/profile";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { AboutBio, AboutHeadline } from "@/components/about-bio";
+import { T } from "@/components/lang-provider";
 
 export const metadata: Metadata = {
   title: "About",
@@ -17,19 +19,11 @@ export default function About() {
           <div className="grid gap-12 lg:grid-cols-[1fr_320px] lg:gap-20">
             <div>
               <Reveal>
-                <p className="meta">About</p>
-                <h1 className="display mt-6 max-w-[13ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
-                  Started in gaming, ended up in infrastructure
-                </h1>
+                <p className="meta"><T k="about.eyebrow" /></p>
+                <AboutHeadline />
               </Reveal>
 
-              <div className="mt-10 space-y-6">
-                {profile.bio.map((para, i) => (
-                  <Reveal key={i} delay={0.06 + i * 0.05}>
-                    <p className="prose-read text-lg">{para}</p>
-                  </Reveal>
-                ))}
-              </div>
+              <AboutBio />
             </div>
 
             <Reveal delay={0.1}>
@@ -68,7 +62,7 @@ export default function About() {
       <section className="border-t border-line px-5 py-20 sm:px-8 sm:py-28">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <h2 className="display text-[clamp(1.9rem,4.2vw,2.8rem)] text-paper">Experience</h2>
+            <h2 className="display text-[clamp(1.9rem,4.2vw,2.8rem)] text-paper"><T k="about.experience" /></h2>
           </Reveal>
           <StaggerList className="mt-12">
             {roles.map((r) => (
@@ -103,7 +97,7 @@ export default function About() {
       <section className="border-t border-line px-5 py-20 sm:px-8 sm:py-28">
         <div className="mx-auto grid max-w-[1180px] gap-14 md:grid-cols-[1.2fr_1fr_1.1fr]">
           <Reveal>
-            <h2 className="meta">Education</h2>
+            <h2 className="meta"><T k="about.education" /></h2>
             <ul className="mt-6 space-y-6">
               {education.map((e) => (
                 <li key={e.school}>
@@ -116,7 +110,7 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={0.06}>
-            <h2 className="meta">Certifications</h2>
+            <h2 className="meta"><T k="about.certifications" /></h2>
             <ul className="mt-6 space-y-3">
               {certifications.map((c) => (
                 <li key={c} className="text-sm text-paper-dim">
@@ -128,7 +122,7 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <h2 className="meta">What I work in</h2>
+            <h2 className="meta"><T k="about.skills" /></h2>
             <div className="mt-6 space-y-5">
               {skills.map((g) => (
                 <div key={g.group}>
@@ -154,7 +148,7 @@ export default function About() {
       <section className="border-t border-line px-5 py-20 sm:px-8 sm:py-28">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <h2 className="display text-[clamp(1.9rem,4.2vw,2.8rem)] text-paper">Elsewhere</h2>
+            <h2 className="display text-[clamp(1.9rem,4.2vw,2.8rem)] text-paper"><T k="about.elsewhere" /></h2>
           </Reveal>
           <StaggerList className="mt-10 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
             {profile.links.map((l) => (
