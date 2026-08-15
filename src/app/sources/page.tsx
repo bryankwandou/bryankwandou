@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { sources, fieldCount, omittedCount } from "@/data/coverage";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { T } from "@/components/lang-provider";
 
 export const metadata: Metadata = {
   title: "Sources",
@@ -15,20 +16,15 @@ export default function Sources() {
       <section className="px-5 pb-16 pt-36 sm:px-8 sm:pt-44">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Checked 14 August 2026</p>
+            <p className="meta"><T k="sources.eyebrow" /></p>
             <h1 className="display mt-6 max-w-[17ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
-              Every claim, and where it came from
+              <T k="sources.title" />
             </h1>
             <p className="prose-read mt-7 text-lg">
-              A portfolio is a document written by the person it flatters. This page
-              exists so none of it has to be taken on faith: {fieldCount} fields, each
-              traced to a public source and to the page that renders it. Open the source,
-              compare, and disagree if it does not match.
+              <T k="sources.lede" vars={{ fields: fieldCount }} />
             </p>
             <p className="prose-read mt-4 text-sm">
-              It also records the {omittedCount} things a source contains that this site
-              deliberately does not show, because an honest map has to include what was
-              left off it.
+              <T k="sources.note" vars={{ omitted: omittedCount }} />
             </p>
           </Reveal>
         </div>

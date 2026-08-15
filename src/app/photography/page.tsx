@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { photos, photographCount, dayCount, firstDay, CONTRACT, CREATOR } from "@/data/photos";
 import { Reveal } from "@/components/motion-primitives";
+import { T } from "@/components/lang-provider";
 import { PhotoGrid } from "@/components/photo-grid";
 
 export const metadata: Metadata = {
@@ -17,23 +18,17 @@ export default function Photography() {
       <section className="px-5 pb-14 pt-36 sm:px-8 sm:pt-44">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Since {firstDay}</p>
+            <p className="meta"><T k="photo.eyebrow" vars={{ date: firstDay }} /></p>
             <h1 className="display mt-6 max-w-[16ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
-              A frame a day, for over a year
+              <T k="photo.title" />
             </h1>
             <div className="mt-8 grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-16">
               <div>
                 <p className="prose-read text-lg">
-                  Instagram lists me as a photographer before it lists anything else, and
-                  for a long time this site did not show a single frame. That was a
-                  misrepresentation by omission, so here it is.
+                  <T k="photo.lede" />
                 </p>
                 <p className="prose-read mt-4">
-                  Every one of these was minted on Tezos on the day it was taken, which
-                  means the date is not a claim I am making now about work I did then —
-                  it is a timestamp somebody else's node recorded. The discipline is the
-                  interesting part rather than any single image: {dayCount} distinct days
-                  carry a publication.
+                  <T k="photo.body" vars={{ days: dayCount }} />
                 </p>
               </div>
 
@@ -82,7 +77,7 @@ export default function Photography() {
           <Reveal>
             <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
               <div>
-                <p className="meta">Provenance</p>
+                <p className="meta"><T k="photo.provenance" /></p>
                 <h2 className="display mt-4 max-w-[18ch] text-[clamp(1.7rem,3.6vw,2.4rem)] text-paper">
                   Where these came from
                 </h2>
