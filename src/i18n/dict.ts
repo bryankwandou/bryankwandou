@@ -70,8 +70,26 @@ export const dict = {
     "journey.note":
       "Every entry below names where it is publicly stated, so none of it has to be taken on trust.",
 
-    "archive.eyebrow": "The rest of it",
-    "archive.title": "A hundred-odd repositories, public and unpolished",
+    "archive.eyebrow": "Archive",
+    "archive.title": "The repositories behind the products",
+    "archive.lede":
+      "There are {repos} public repositories on the account and only {deployed} of them have a polished front door. These are the ones from the other pile that are worth pointing at — some because the engineering underneath is the interesting part, some because they solve a problem in the city I actually live in.",
+    "archive.index": "Complete index",
+
+    "sources.eyebrow": "Checked 14 August 2026",
+    "sources.title": "Every claim, and where it came from",
+    "sources.lede":
+      "A portfolio is a document written by the person it flatters. This page exists so none of it has to be taken on faith: {fields} fields, each traced to a public source and to the page that renders it. Open the source, compare, and disagree if it does not match.",
+    "sources.note":
+      "It also records the {omitted} things a source contains that this site deliberately does not show, because an honest map has to include what was left off it.",
+
+    "photo.eyebrow": "Since {date}",
+    "photo.title": "A frame a day, for over a year",
+    "photo.lede":
+      "Instagram lists me as a photographer before it lists anything else, and for a long time this site did not show a single frame. That was a misrepresentation by omission, so here it is.",
+    "photo.body":
+      "Every one of these was minted on Tezos on the day it was taken, which means the date is not a claim I am making now about work I did then — it is a timestamp somebody else's node recorded. The discipline is the interesting part rather than any single image: {days} distinct days carry a publication.",
+    "photo.provenance": "Provenance",
 
     "about.eyebrow": "About",
     "about.experience": "Experience",
@@ -143,8 +161,26 @@ export const dict = {
     "journey.note":
       "Setiap entri di bawah menyebut di mana hal itu dinyatakan secara publik, jadi tidak ada yang perlu ditelan mentah-mentah.",
 
-    "archive.eyebrow": "Sisanya",
-    "archive.title": "Seratus lebih repositori, publik dan belum dipoles",
+    "archive.eyebrow": "Arsip",
+    "archive.title": "Repositori di balik produk-produk itu",
+    "archive.lede":
+      "Ada {repos} repositori publik di akun ini dan hanya {deployed} yang punya pintu depan yang rapi. Yang di bawah ini diambil dari tumpukan sisanya karena memang layak ditunjuk — sebagian karena bagian tekniknya yang menarik, sebagian karena menyelesaikan persoalan nyata di kota tempat saya tinggal.",
+    "archive.index": "Indeks lengkap",
+
+    "sources.eyebrow": "Diperiksa 14 Agustus 2026",
+    "sources.title": "Setiap klaim, dan dari mana asalnya",
+    "sources.lede":
+      "Portofolio adalah dokumen yang ditulis oleh orang yang diuntungkannya. Halaman ini ada supaya tidak ada satu pun bagiannya yang perlu dipercaya begitu saja: {fields} bidang data, masing-masing dilacak ke sumber publiknya dan ke halaman yang menampilkannya. Buka sumbernya, bandingkan, dan bantah kalau tidak cocok.",
+    "sources.note":
+      "Halaman ini juga mencatat {omitted} hal yang ada di sumbernya tetapi sengaja tidak ditampilkan di situs ini, karena peta yang jujur harus memuat juga apa yang tidak dimasukkan.",
+
+    "photo.eyebrow": "Sejak {date}",
+    "photo.title": "Satu bingkai sehari, lebih dari setahun",
+    "photo.lede":
+      "Instagram menyebut saya fotografer sebelum menyebut hal lain apa pun, dan cukup lama situs ini tidak menampilkan satu bingkai pun. Itu keliru karena menghilangkan sesuatu, jadi sekarang ada di sini.",
+    "photo.body":
+      "Semuanya dicetak di Tezos pada hari foto itu diambil, artinya tanggalnya bukan klaim yang saya buat sekarang tentang kerja saya dulu — itu stempel waktu yang dicatat node milik orang lain. Yang menarik adalah kedisiplinannya, bukan satu gambar tertentu: {days} hari berbeda memuat satu penerbitan.",
+    "photo.provenance": "Asal-usul",
 
     "about.eyebrow": "Tentang",
     "about.experience": "Pengalaman",

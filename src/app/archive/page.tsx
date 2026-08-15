@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { infrastructure, applications, counts, type Entry } from "@/data/archive";
 import { repoCount, deployedCount } from "@/data/repos";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { T } from "@/components/lang-provider";
 import { RepoIndex } from "@/components/repo-index";
 
 export const metadata: Metadata = {
@@ -57,16 +58,15 @@ export default function Archive() {
       <section className="px-5 pb-16 pt-36 sm:px-8 sm:pt-44">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Archive</p>
+            <p className="meta"><T k="archive.eyebrow" /></p>
             <h1 className="display mt-6 max-w-[16ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
-              The repositories behind the products
+              <T k="archive.title" />
             </h1>
             <p className="prose-read mt-7 text-lg">
-              There are {counts.publicRepos} public repositories on the account and only{" "}
-              {counts.deployedProducts} of them have a polished front door. These are the
-              ones from the other pile that are worth pointing at — some because the
-              engineering underneath is the interesting part, some because they solve a
-              problem in the city I actually live in.
+              <T
+                k="archive.lede"
+                vars={{ repos: counts.publicRepos, deployed: counts.deployedProducts }}
+              />
             </p>
           </Reveal>
 
@@ -142,7 +142,7 @@ export default function Archive() {
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Complete index</p>
+            <p className="meta"><T k="archive.index" /></p>
             <h2 className="display mt-4 max-w-[20ch] text-[clamp(2rem,4.6vw,3rem)] text-paper">
               Every public repository, including the ones that went nowhere
             </h2>
