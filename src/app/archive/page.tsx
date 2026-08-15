@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { infrastructure, applications, counts, type Entry } from "@/data/archive";
+import { repoCount, deployedCount } from "@/data/repos";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { RepoIndex } from "@/components/repo-index";
 
 export const metadata: Metadata = {
   title: "Archive",
@@ -132,6 +134,30 @@ export default function Archive() {
             ))}
           </StaggerList>
 
+        </div>
+      </section>
+
+      {/* Everything, not just the curated part. Pulled from the GitHub API so
+          the list cannot quietly drift out of date with the account. */}
+      <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-[1180px]">
+          <Reveal>
+            <p className="meta">Complete index</p>
+            <h2 className="display mt-4 max-w-[20ch] text-[clamp(2rem,4.6vw,3rem)] text-paper">
+              Every public repository, including the ones that went nowhere
+            </h2>
+            <p className="prose-read mt-6">
+              {repoCount} repositories, forks excluded. {deployedCount} of them have a
+              deployed URL; the rest are libraries, experiments, and coursework that were
+              never published. Listing the whole account rather than a flattering slice is
+              the point — a portfolio that only shows the wins is not evidence of anything.
+            </p>
+          </Reveal>
+
+          <div className="mt-12">
+            <RepoIndex />
+          </div>
+
           <Reveal>
             <a
               href="https://github.com/bryankwandou?tab=repositories"
@@ -139,7 +165,7 @@ export default function Archive() {
               rel="noreferrer"
               className="group mt-12 inline-flex items-center gap-2 rounded-full border border-line-strong px-6 py-3 text-sm text-paper transition-colors duration-300 hover:border-ember hover:text-ember"
             >
-              Browse all {counts.publicRepos} on GitHub
+              Check the account on GitHub
               <ArrowUpRight
                 size={15}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
