@@ -58,6 +58,21 @@ export const dict = {
     "home.close.body":
       "Collaboration on agentic infrastructure, Solana work, or anything where the accountability question is the hard part. Also photography, and anything to do with building a community from nothing.",
 
+    "work.eyebrow": "Twenty-four deployments",
+    "work.title": "Everything with a live URL",
+    "work.lede":
+      "Each of these is deployed and reachable. Where something runs on Solana devnet it says devnet, and where it is a prototype it says prototype — the distinction matters more than the headline does. Screenshots are real captures, not mockups.",
+
+    "journey.eyebrow": "2010 — now",
+    "journey.title": "Sixteen years of the same habit",
+    "journey.lede":
+      "It looks like four unrelated careers on paper — esports, photography, NFT art, infrastructure engineering. It is one thing repeated. Find a group of people with nothing built for them, and build them something. The medium changed; the reflex did not.",
+    "journey.note":
+      "Every entry below names where it is publicly stated, so none of it has to be taken on trust.",
+
+    "archive.eyebrow": "The rest of it",
+    "archive.title": "A hundred-odd repositories, public and unpolished",
+
     "about.eyebrow": "About",
     "about.experience": "Experience",
     "about.education": "Education",
@@ -115,6 +130,21 @@ export const dict = {
     "home.close.title": "Pekerjaan yang layak dibubuhi nama saya.",
     "home.close.body":
       "Kolaborasi di infrastruktur agentik, pekerjaan Solana, atau apa pun yang bagian sulitnya adalah soal pertanggungjawaban. Juga fotografi, dan apa pun yang berkaitan dengan membangun komunitas dari nol.",
+
+    "work.eyebrow": "Dua puluh empat rilis",
+    "work.title": "Semua yang punya URL aktif",
+    "work.lede":
+      "Semua ini sudah ter-deploy dan bisa diakses. Yang berjalan di Solana devnet ditulis devnet, dan yang masih prototipe ditulis prototipe — perbedaan itu lebih penting daripada judulnya. Tangkapan layarnya nyata, bukan mockup.",
+
+    "journey.eyebrow": "2010 — sekarang",
+    "journey.title": "Enam belas tahun dengan kebiasaan yang sama",
+    "journey.lede":
+      "Di atas kertas ini tampak seperti empat karier yang tidak berhubungan — esport, fotografi, karya NFT, rekayasa infrastruktur. Sebenarnya satu hal yang diulang. Temukan sekelompok orang yang belum ada yang membangunkan apa pun untuk mereka, lalu bangunkan sesuatu. Mediumnya berganti; refleksnya tidak.",
+    "journey.note":
+      "Setiap entri di bawah menyebut di mana hal itu dinyatakan secara publik, jadi tidak ada yang perlu ditelan mentah-mentah.",
+
+    "archive.eyebrow": "Sisanya",
+    "archive.title": "Seratus lebih repositori, publik dan belum dipoles",
 
     "about.eyebrow": "Tentang",
     "about.experience": "Pengalaman",
