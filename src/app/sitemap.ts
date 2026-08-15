@@ -8,7 +8,7 @@ const SITE = "https://bryankwandou.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const pages = ["", "/work", "/journey", "/about", "/archive", "/cv"].map((path) => ({
+  const pages = ["", "/work", "/journey", "/about", "/archive", "/cv", "/photography", "/sources"].map((path) => ({
     url: `${SITE}${path}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
