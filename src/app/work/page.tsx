@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { work } from "@/data/work";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { T } from "@/components/lang-provider";
 import { StatusTag } from "@/components/status-tag";
 
 export const metadata: Metadata = {
@@ -18,15 +19,12 @@ export default function WorkIndex() {
       <section className="px-5 pb-14 pt-36 sm:px-8 sm:pt-44">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Twenty-four deployments</p>
+            <p className="meta"><T k="work.eyebrow" /></p>
             <h1 className="display mt-6 max-w-[15ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
-              Everything with a live URL
+              <T k="work.title" />
             </h1>
             <p className="prose-read mt-7 text-lg">
-              Each of these is deployed and reachable. Where something runs on Solana
-              devnet it says devnet, and where it is a prototype it says prototype —
-              the distinction matters more than the headline does. Screenshots are real
-              captures, not mockups.
+              <T k="work.lede" />
             </p>
           </Reveal>
         </div>

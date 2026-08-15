@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { craft } from "@/data/journey";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
+import { T } from "@/components/lang-provider";
 import { JourneySpine } from "@/components/journey-spine";
 
 export const metadata: Metadata = {
@@ -17,19 +18,15 @@ export default function Journey() {
       <section className="px-5 pb-16 pt-36 sm:px-8 sm:pt-44">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">2010 — now</p>
+            <p className="meta"><T k="journey.eyebrow" /></p>
             <h1 className="display mt-6 max-w-[14ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
-              Sixteen years of the same habit
+              <T k="journey.title" />
             </h1>
             <p className="prose-read mt-7 text-lg">
-              It looks like four unrelated careers on paper — esports, photography, NFT
-              art, infrastructure engineering. It is one thing repeated. Find a group of
-              people with nothing built for them, and build them something. The medium
-              changed; the reflex did not.
+              <T k="journey.lede" />
             </p>
             <p className="prose-read mt-4 text-sm">
-              Every entry below names where it is publicly stated, so none of it has to
-              be taken on trust.
+              <T k="journey.note" />
             </p>
           </Reveal>
         </div>

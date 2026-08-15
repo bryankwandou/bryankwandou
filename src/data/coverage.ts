@@ -60,6 +60,25 @@ export const sources: Source[] = [
       { field: "Product READMEs", value: "Architecture notes for 12 products", shownOn: "/work/[product]" },
       { field: "On-chain artefacts in READMEs", value: "19 program IDs, PDAs, and signatures", shownOn: "/work/[product]" },
     ],
+    omitted: [
+      {
+        what: "A screenshot for 104 of the repositories",
+        why: "They carry no deployed URL, so there is no running site to photograph. An invented image would be the one thing that discredits everything else here.",
+      },
+    ],
+  },
+
+  {
+    name: "The deployed sites themselves",
+    handle: "24 live URLs",
+    href: "https://github.com/bryankwandou?tab=repositories",
+    method:
+      "Screenshots are captures of the running product, taken through headless Chrome against the live URL. Nothing is a mockup, a figma export, or a render of a design that was never built.",
+    fields: [
+      { field: "Products with a live deployment", value: "24", shownOn: "/work" },
+      { field: "Screenshots", value: "93 captures across the 24", shownOn: "/work/[product]" },
+      { field: "Stemloom, Cutwright, Aval", value: "Captured 15 August 2026", shownOn: "/work/[product]" },
+    ],
   },
 
   {
