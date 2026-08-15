@@ -13,6 +13,8 @@ export const dict = {
   en: {
     "nav.work": "Work",
     "nav.journey": "Journey",
+    "nav.photography": "Photography",
+    "nav.sources": "Sources",
     "nav.about": "About",
     "nav.archive": "Archive",
     "nav.cv": "CV",
@@ -62,6 +64,8 @@ export const dict = {
   id: {
     "nav.work": "Karya",
     "nav.journey": "Perjalanan",
+    "nav.photography": "Fotografi",
+    "nav.sources": "Sumber",
     "nav.about": "Tentang",
     "nav.archive": "Arsip",
     "nav.cv": "CV",

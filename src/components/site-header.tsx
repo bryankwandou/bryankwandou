@@ -10,6 +10,7 @@ import type { Key } from "@/i18n/dict";
 
 const NAV: { href: string; key: Key }[] = [
   { href: "/work", key: "nav.work" },
+  { href: "/photography", key: "nav.photography" },
   { href: "/journey", key: "nav.journey" },
   { href: "/about", key: "nav.about" },
   { href: "/archive", key: "nav.archive" },

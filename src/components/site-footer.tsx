@@ -27,6 +27,8 @@ export function SiteFooter() {
                 ["/about", "About"],
                 ["/archive", "Archive"],
                 ["/cv", "CV"],
+                ["/photography", "Photography"],
+                ["/sources", "Sources"],
               ].map(([href, label]) => (
                 <li key={href}>
                   <Link
