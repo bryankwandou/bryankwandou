@@ -19,6 +19,9 @@ const basePath = process.env.PAGES_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // Emit work/index.html rather than work.html, so a static host answers both
+  // /work and /work/ instead of 404ing on the trailing slash.
+  trailingSlash: true,
   basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
   env: {

@@ -65,7 +65,8 @@ jobs:
           base="${base%/}"
           fail=0
           for path in "" /work /journey /about /archive /cv /work/veylock; do
-            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 5 --retry-delay 6 --retry-all-errors "$base$path")
+            # -L: the bare root legitimately 301s to the trailing-slash form.
+            code=$(curl -sL -o /dev/null -w '%{http_code}' --retry 5 --retry-delay 6 --retry-all-errors "$base$path")
             echo "$path -> $code"
             [ "$code" = "200" ] || fail=1
           done
