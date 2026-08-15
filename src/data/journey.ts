@@ -90,10 +90,10 @@ export const chapters: Chapter[] = [
   {
     year: "2026",
     order: 10,
-    title: "Twenty-one products, one question",
+    title: "Twenty-four products, one question",
     strand: "build",
     body: "A long run of shipping, and partway through it I noticed every build was answering the same thing. Payments, freight, childcare, home care, municipal services — different industries, identical missing part. An autonomous system can act, but nobody can check what it did afterwards. So I stopped treating that as a detail and started treating it as the product.",
-    source: "GitHub, 104 public repositories; 21 live deployments",
+    source: "GitHub, 128 public repositories; 24 live deployments",
   },
 ];
 

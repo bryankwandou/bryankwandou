@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s · Bryan Kwandou",
   },
   description:
-    "Bryan Kwandou builds software that leaves a trail. Twenty-one shipped products, 104 public repositories, and a habit of putting hard limits around autonomous systems.",
+    "Bryan Kwandou builds software that leaves a trail. Twenty-four shipped products, 128 public repositories, and a habit of putting hard limits around autonomous systems.",
   keywords: [
     "Bryan Kwandou",
     "Vincentius Bryan Kwandou",
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     siteName: "Bryan Kwandou",
     title: "Bryan Kwandou — builder, Makassar",
     description:
-      "Twenty-one shipped products and 104 public repositories, built around one question: after the machine acts, can a person still check what happened?",
+      "Twenty-four shipped products and 128 public repositories, built around one question: after the machine acts, can a person still check what happened?",
   },
   twitter: {
     card: "summary_large_image",
     creator: "@nayrbryanGaming",
     title: "Bryan Kwandou — builder, Makassar",
-    description: "Twenty-one shipped products. 104 public repositories. Work you can check.",
+    description: "Twenty-four shipped products. 128 public repositories. Work you can check.",
   },
   robots: { index: true, follow: true },
 };

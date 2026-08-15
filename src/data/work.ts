@@ -14,7 +14,7 @@ export type Work = {
   shots: number;
 };
 
-// The twenty-one products with public deployments. Screenshots and logos in
+// The twenty-four products with public deployments. Screenshots and logos in
 // /public are the real captures from each build, not mockups.
 export const work: Work[] = [
   {
@@ -268,6 +268,45 @@ export const work: Work[] = [
     stack: ["Next.js", "TypeScript", "Groq"],
     status: "prototype",
     shots: 4,
+  },
+
+  // Three deployments that were sitting in the repository list without ever
+  // being written up. Captured from the running sites in August 2026.
+  {
+    slug: "stemloom",
+    name: "Stemloom",
+    tagline: "A multitrack audio editor that decodes your file locally and never uploads it.",
+    note: "Most browser audio tools are a thin shell over someone else's server, which means your recording leaves your machine before you have decided anything. Stemloom does the decoding, the effect rack, and the uncompressed export in the tab itself. No account wall in front of the export button, and no watermark burned into the result.",
+    field: "Audio tooling",
+    live: "https://stemloom.vercel.app",
+    repo: "https://github.com/bryankwandou/stemloom",
+    stack: ["Next.js", "TypeScript", "Web Audio API"],
+    status: "live",
+    shots: 3,
+  },
+  {
+    slug: "cutwright",
+    name: "Cutwright",
+    tagline: "Cuts, grades, and encodes video in a browser tab without sending a byte anywhere.",
+    note: "Twenty-six colour looks, fifteen transitions, and fourteen motion curves, all rendered on canvas by the same code that writes the exported file. The reason it exists is the resolution paywall: a laptop has always been able to produce the output that editors charge a monthly fee to unlock.",
+    field: "Video tooling",
+    live: "https://cutwright.vercel.app",
+    repo: "https://github.com/bryankwandou/cutwright",
+    stack: ["Next.js", "TypeScript", "Canvas", "WebCodecs"],
+    status: "live",
+    shots: 3,
+  },
+  {
+    slug: "aval-rail",
+    name: "Aval",
+    tagline: "An agent's payment stays valid while a person is still deciding.",
+    note: "A Solana blockhash expires in about ninety seconds, so an agent payment waiting on human approval is usually rubbish by the time anyone reads it. Most designs solve that by quietly removing the human. Aval anchors the transaction to a durable nonce instead, so the request waits as long as the shop does. Proved on devnet: the control window closed and the nonce still finalised four hours and twenty-nine minutes later.",
+    field: "Agentic payments",
+    live: "https://aval-site.vercel.app",
+    repo: "https://github.com/bryankwandou/aval-rail",
+    stack: ["Next.js", "TypeScript", "Solana Pay", "Rust"],
+    status: "devnet",
+    shots: 3,
   },
 ];
 

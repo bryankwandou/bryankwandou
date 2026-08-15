@@ -9,7 +9,7 @@ import { StatusTag } from "@/components/status-tag";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Twenty-one products with live deployments — agentic payment rails, compliance interlocks, and operational software built so the record can be checked afterwards.",
+    "Twenty-four products with live deployments — agentic payment rails, compliance interlocks, and operational software built so the record can be checked afterwards.",
 };
 
 export default function WorkIndex() {
@@ -18,7 +18,7 @@ export default function WorkIndex() {
       <section className="px-5 pb-14 pt-36 sm:px-8 sm:pt-44">
         <div className="mx-auto max-w-[1180px]">
           <Reveal>
-            <p className="meta">Twenty-one deployments</p>
+            <p className="meta">Twenty-four deployments</p>
             <h1 className="display mt-6 max-w-[15ch] text-[clamp(2.6rem,7.5vw,5rem)] text-paper">
               Everything with a live URL
             </h1>

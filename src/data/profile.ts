@@ -17,7 +17,7 @@ export const profile = {
   // Written for the site. The source material is the LinkedIn summary; the
   // phrasing here is my own and deliberately drops the resume register.
   lede:
-    "I build software that leaves a trail. Twenty-one products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened?",
+    "I build software that leaves a trail. Twenty-four products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened?",
 
   bio: [
     "I started in gaming in 2010, which is a long time before any of this looked like a career. NNG Esport came out of that — a grassroots thing I put together because the players around me had nowhere organised to compete. Running it taught me more about audiences, brand, and keeping a community alive than any course has since.",
@@ -32,12 +32,12 @@ export const profile = {
     "Saya masih memotret. Saya masih merilis karya NFT di Tezos dan Drip.Haus. Saya mendirikan badan esport universitas dan memimpin klub blockchain kampus. Di atas kertas ini terlihat seperti kolom-kolom yang tidak berhubungan, padahal semuanya satu kebiasaan — temukan sekelompok orang yang belum punya wadah, lalu bangunkan wadahnya.",
   ],
 
-  // Counts are computed from the public GitHub account, checked 6 August 2026.
+  // Counts are computed from the public GitHub account, checked 14 August 2026.
   stats: [
-    { value: "104", label: "public repositories" },
-    { value: "21", label: "products with live deployments" },
+    { value: "128", label: "public repositories" },
+    { value: "24", label: "products with live deployments" },
+    { value: "402", label: "photographs published on chain" },
     { value: "2010", label: "building communities since" },
-    { value: "4", label: "chains shipped against" },
   ],
 
   links: [

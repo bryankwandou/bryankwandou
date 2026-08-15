@@ -92,7 +92,7 @@ export default function OpengraphImage() {
         >
           <div style={{ display: "flex", fontSize: 34, color: "#F5F1EA" }}>Bryan Kwandou</div>
           <div style={{ display: "flex", fontSize: 24, color: "#A9A29A", fontFamily: "monospace" }}>
-            21 products · 104 repositories
+            24 products · 128 repositories
           </div>
         </div>
       </div>
