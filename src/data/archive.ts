@@ -8,7 +8,7 @@ export type Entry = {
   live?: string;
 };
 
-// Beyond the twenty-one deployed products there are another eighty-odd public
+// Beyond the twenty-four deployed products there are another hundred-odd public
 // repositories. These are the ones worth pointing at. Everything is public at
 // github.com/bryankwandou.
 

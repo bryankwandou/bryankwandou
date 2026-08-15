@@ -8,7 +8,7 @@ import { RepoIndex } from "@/components/repo-index";
 export const metadata: Metadata = {
   title: "Archive",
   description:
-    "Beyond the deployed products: Solana substrate in Rust, a post-quantum chain experiment, local government software for Makassar, mobile apps in Flutter, and the rest of 104 public repositories.",
+    "Beyond the deployed products: Solana substrate in Rust, a post-quantum chain experiment, local government software for Makassar, mobile apps in Flutter, and the rest of 128 public repositories.",
 };
 
 function Row({ e, n }: { e: Entry; n: number }) {

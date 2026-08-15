@@ -25,12 +25,12 @@ export const dict = {
     "home.hero.2a": "leaves a ",
     "home.hero.2b": "trail",
     "home.lede":
-      "Twenty-one products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened? Most of my work draws that line and then makes it inspectable by someone who has no reason to trust me.",
+      "Twenty-four products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened? Most of my work draws that line and then makes it inspectable by someone who has no reason to trust me.",
     "home.cta.work": "See the work",
     "home.cta.long": "Read the long version",
 
     "home.selected.eyebrow": "Selected work",
-    "home.selected.title": "Six of the twenty-one",
+    "home.selected.title": "Six of the twenty-four",
     "home.selected.all": "All {n} products",
 
     "home.quote":
@@ -83,12 +83,12 @@ export const dict = {
     "home.hero.2a": "yang meninggalkan ",
     "home.hero.2b": "jejak",
     "home.lede":
-      "Dua puluh satu produk rilis tahun ini, dan satu pertanyaan yang sama ada di bawah semuanya: setelah mesin bertindak, apakah manusia masih bisa memeriksa apa yang terjadi? Sebagian besar kerja saya menarik garis itu, lalu membuatnya bisa diperiksa oleh orang yang tidak punya alasan untuk percaya pada saya.",
+      "Dua puluh empat produk rilis tahun ini, dan satu pertanyaan yang sama ada di bawah semuanya: setelah mesin bertindak, apakah manusia masih bisa memeriksa apa yang terjadi? Sebagian besar kerja saya menarik garis itu, lalu membuatnya bisa diperiksa oleh orang yang tidak punya alasan untuk percaya pada saya.",
     "home.cta.work": "Lihat karyanya",
     "home.cta.long": "Baca versi panjangnya",
 
     "home.selected.eyebrow": "Karya pilihan",
-    "home.selected.title": "Enam dari dua puluh satu",
+    "home.selected.title": "Enam dari dua puluh empat",
     "home.selected.all": "Semua {n} produk",
 
     "home.quote":

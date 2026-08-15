@@ -8,7 +8,7 @@ import { JourneySpine } from "@/components/journey-spine";
 export const metadata: Metadata = {
   title: "Journey",
   description:
-    "Sixteen years, from founding a grassroots esports outfit in 2010 to shipping twenty-one products in 2026. Community, craft, study, and building — four strands of the same habit.",
+    "Sixteen years, from founding a grassroots esports outfit in 2010 to shipping twenty-four products in 2026. Community, craft, study, and building — four strands of the same habit.",
 };
 
 export default function Journey() {
@@ -87,7 +87,7 @@ export default function Journey() {
                 href="/work"
                 className="group inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-medium text-ink transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Twenty-one products
+                Twenty-four products
                 <ArrowRight
                   size={15}
                   className="transition-transform duration-300 group-hover:translate-x-1"

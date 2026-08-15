@@ -58,7 +58,7 @@ export default function CV() {
 
         <Section title="Profile">
           <p className="prose-read text-sm">
-            Computer science undergraduate who ships. Twenty-one products with live
+            Computer science undergraduate who ships. Twenty-four products with live
             deployments this year, {artifactTotal} of them carrying on-chain artefacts
             anyone can verify on Solana devnet. Community organiser since 2010, founder of
             the university esports body, and campus lead for the Superteam blockchain club.
@@ -95,7 +95,7 @@ export default function CV() {
 
         <Section title="Selected work">
           <p className="prose-read text-sm">
-            Six of twenty-one, chosen because each one deployed a program or settled a
+            Six of twenty-four, chosen because each one deployed a program or settled a
             transaction that can still be inspected today.
           </p>
           <div className="mt-4 space-y-3">
