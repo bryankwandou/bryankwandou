@@ -25,6 +25,13 @@ export const profile = {
     "I still shoot photographs. I still release NFT work on Tezos and Drip.Haus. I founded the university esports body and I lead the campus blockchain club. These read like unrelated columns on a CV, but they are one habit — find a group of people with no infrastructure, and build them some.",
   ],
 
+  /** The same three paragraphs in Indonesian, written rather than translated. */
+  bioId: [
+    "Saya mulai dari dunia gaming pada 2010, jauh sebelum hal ini kelihatan seperti karier. NNG Esport lahir dari sana — sesuatu yang saya bentuk dari bawah karena para pemain di sekitar saya tidak punya tempat yang terorganisir untuk bertanding. Menjalankannya mengajari saya soal audiens, merek, dan cara menjaga komunitas tetap hidup lebih banyak daripada kursus mana pun sesudahnya.",
+    "Urusan membangun perangkat lunak datang belakangan, dan datangnya cepat. Saya kuliah ilmu komputer di Universitas Atma Jaya Makassar, dan di antara tugas kuliah dan hackathon saya menemukan persoalan yang terus saya putari: sistem otonom makin pandai melakukan sesuatu dan makin buruk dalam mempertanggungjawabkannya. Karena itu hampir semua yang saya rilis sekarang memasang batas keras di depan mesin, dan sebuah tanda terima di sisi seberangnya.",
+    "Saya masih memotret. Saya masih merilis karya NFT di Tezos dan Drip.Haus. Saya mendirikan badan esport universitas dan memimpin klub blockchain kampus. Di atas kertas ini terlihat seperti kolom-kolom yang tidak berhubungan, padahal semuanya satu kebiasaan — temukan sekelompok orang yang belum punya wadah, lalu bangunkan wadahnya.",
+  ],
+
   // Counts are computed from the public GitHub account, checked 6 August 2026.
   stats: [
     { value: "104", label: "public repositories" },

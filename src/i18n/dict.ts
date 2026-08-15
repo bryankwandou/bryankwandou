@@ -58,6 +58,13 @@ export const dict = {
     "home.close.body":
       "Collaboration on agentic infrastructure, Solana work, or anything where the accountability question is the hard part. Also photography, and anything to do with building a community from nothing.",
 
+    "about.eyebrow": "About",
+    "about.experience": "Experience",
+    "about.education": "Education",
+    "about.certifications": "Certifications",
+    "about.skills": "What I work in",
+    "about.elsewhere": "Elsewhere",
+
     "lang.label": "Language",
   },
 
@@ -108,6 +115,13 @@ export const dict = {
     "home.close.title": "Pekerjaan yang layak dibubuhi nama saya.",
     "home.close.body":
       "Kolaborasi di infrastruktur agentik, pekerjaan Solana, atau apa pun yang bagian sulitnya adalah soal pertanggungjawaban. Juga fotografi, dan apa pun yang berkaitan dengan membangun komunitas dari nol.",
+
+    "about.eyebrow": "Tentang",
+    "about.experience": "Pengalaman",
+    "about.education": "Pendidikan",
+    "about.certifications": "Sertifikasi",
+    "about.skills": "Bidang yang saya kerjakan",
+    "about.elsewhere": "Di tempat lain",
 
     "lang.label": "Bahasa",
   },
