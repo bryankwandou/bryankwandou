@@ -184,6 +184,24 @@ export const education = [
   },
 ];
 
+/**
+ * A paper presented at the 3rd International Conference on Digital, Social,
+ * and Science, Bandung, July 2026. Read from the certificate itself, which
+ * carries its own reference number — the LinkedIn export does not list it.
+ */
+export const research = {
+  role: "Presenter",
+  paper:
+    "Weather-Aware Movie Recommendation System: A Human-Centered AI Approach to Enhancing User Experience in Digital Entertainment",
+  venue: "3rd International Conference on Digital, Social, and Science (ICoDSS) 2026",
+  theme:
+    "Human-Centered AI for Shared Prosperity: Advancing Digital Systems, Social Transformation, and Scientific Inquiry",
+  organiser: "PT Ebiz Prima Nusa",
+  place: "Bandung, Indonesia",
+  date: "23 July 2026",
+  ref: "188/B-2/ICODSS/EBS/VII/2026",
+} as const;
+
 // The first five come from the LinkedIn certifications section (Dicoding).
 // The sixth is a webinar certificate pinned to the profile's Featured section
 // rather than filed under certifications, so it is named with its issuer.
