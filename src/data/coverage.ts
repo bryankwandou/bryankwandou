@@ -134,6 +134,25 @@ export const sources: Source[] = [
   },
 
   {
+    name: "Conference and course certificates",
+    handle: "issued documents",
+    href: "https://orcid.org/0009-0009-1652-0995",
+    method:
+      "Read from the certificates themselves. Each carries its own reference number, issuer, and date, none of which appear in the LinkedIn export.",
+    fields: [
+      { field: "ICoDSS 2026 presenter certificate", value: "Ref 188/B-2/ICODSS/EBS/VII/2026", shownOn: "/about, /cv" },
+      { field: "Paper presented", value: "Weather-Aware Movie Recommendation System", shownOn: "/about, /cv" },
+      { field: "GEMAR X IDN webinar", value: "Yayasan GEMAR Indonesia, Aug 2026", shownOn: "/about, /cv" },
+    ],
+    omitted: [
+      {
+        what: "Any certificate not held as a file",
+        why: "Several are visible only as images inside LinkedIn posts, which the profile export does not carry and which are not read automatically.",
+      },
+    ],
+  },
+
+  {
     name: "ORCID",
     handle: "0009-0009-1652-0995",
     href: "https://orcid.org/0009-0009-1652-0995",

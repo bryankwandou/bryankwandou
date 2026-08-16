@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { profile, roles, education, certifications, skills } from "@/data/profile";
+import { profile, roles, education, certifications, skills, research } from "@/data/profile";
 import { work } from "@/data/work";
 import { proofs } from "@/data/proof";
 import { PrintButton } from "@/components/print-button";
@@ -130,7 +130,17 @@ export default function CV() {
                 </li>
               ))}
             </ul>
-            <p className="meta mt-3">Dicoding Indonesia</p>
+            <p className="meta mt-3">Dicoding, except where an issuer is named</p>
+          </Section>
+
+          <Section title="Conference paper">
+            <p className="text-xs text-paper-dim">{research.paper}</p>
+            <p className="meta mt-1.5">
+              {research.role} · {research.venue}
+            </p>
+            <p className="meta tnum mt-1">
+              {research.place} · {research.date} · Ref {research.ref}
+            </p>
           </Section>
         </div>
 

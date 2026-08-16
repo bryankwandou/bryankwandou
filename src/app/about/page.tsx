@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { profile, roles, education, certifications, skills } from "@/data/profile";
+import { profile, roles, education, certifications, skills, research } from "@/data/profile";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
 import { AboutBio, AboutHeadline } from "@/components/about-bio";
 import { T } from "@/components/lang-provider";
@@ -118,7 +118,17 @@ export default function About() {
                 </li>
               ))}
             </ul>
-            <p className="meta mt-5">Issued by Dicoding</p>
+            <p className="meta mt-5">Dicoding, except where an issuer is named</p>
+
+            <h2 className="meta mt-10">Conference paper</h2>
+            <p className="mt-6 text-sm text-paper">{research.paper}</p>
+            <p className="mt-2 text-sm text-paper-dim">
+              {research.role} · {research.venue}
+            </p>
+            <p className="meta tnum mt-1.5">
+              {research.place} · {research.date}
+            </p>
+            <p className="meta mt-2">Ref {research.ref}</p>
           </Reveal>
 
           <Reveal delay={0.12}>
