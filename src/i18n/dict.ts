@@ -25,7 +25,7 @@ export const dict = {
     "home.hero.2a": "leaves a ",
     "home.hero.2b": "trail",
     "home.lede":
-      "Twenty-four products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened? Most of my work draws that line and then makes it inspectable by someone who has no reason to trust me.",
+      "Twenty-four products shipped this year, and the same question sits under every one of them: after the machine acts, can a person still check what happened? Most of my work draws that line and then makes it inspectable.",
     "home.cta.work": "See the work",
     "home.cta.long": "Read the long version",
 
@@ -61,14 +61,14 @@ export const dict = {
     "work.eyebrow": "Twenty-four deployments",
     "work.title": "Everything with a live URL",
     "work.lede":
-      "Each of these is deployed and reachable. Where something runs on Solana devnet it says devnet, and where it is a prototype it says prototype — the distinction matters more than the headline does. Screenshots are real captures, not mockups.",
+      "Each of these is deployed and reachable. Where something runs on Solana devnet it says devnet, and where it is a prototype it says prototype.",
 
     "journey.eyebrow": "2010 — now",
     "journey.title": "Sixteen years of the same habit",
     "journey.lede":
       "It looks like four unrelated careers on paper — esports, photography, NFT art, infrastructure engineering. It is one thing repeated. Find a group of people with nothing built for them, and build them something. The medium changed; the reflex did not.",
     "journey.note":
-      "Every entry below names where it is publicly stated, so none of it has to be taken on trust.",
+      "Every entry names where it is publicly stated.",
 
     "archive.eyebrow": "Archive",
     "archive.title": "The repositories behind the products",
@@ -79,9 +79,9 @@ export const dict = {
     "sources.eyebrow": "Checked 14 August 2026",
     "sources.title": "Every claim, and where it came from",
     "sources.lede":
-      "A portfolio is a document written by the person it flatters. This page exists so none of it has to be taken on faith: {fields} fields, each traced to a public source and to the page that renders it. Open the source, compare, and disagree if it does not match.",
+      "{fields} fields, each traced to a public source and to the page that renders it.",
     "sources.note":
-      "It also records the {omitted} things a source contains that this site deliberately does not show, because an honest map has to include what was left off it.",
+      "It also lists the {omitted} things a source contains that this site does not show.",
 
     "photo.eyebrow": "Since {date}",
     "photo.title": "A frame a day, for over a year",
@@ -116,7 +116,7 @@ export const dict = {
     "home.hero.2a": "yang meninggalkan ",
     "home.hero.2b": "jejak",
     "home.lede":
-      "Dua puluh empat produk rilis tahun ini, dan satu pertanyaan yang sama ada di bawah semuanya: setelah mesin bertindak, apakah manusia masih bisa memeriksa apa yang terjadi? Sebagian besar kerja saya menarik garis itu, lalu membuatnya bisa diperiksa oleh orang yang tidak punya alasan untuk percaya pada saya.",
+      "Dua puluh empat produk rilis tahun ini, dan satu pertanyaan yang sama ada di bawah semuanya: setelah mesin bertindak, apakah manusia masih bisa memeriksa apa yang terjadi? Sebagian besar kerja saya menarik garis itu, lalu membuatnya bisa diperiksa.",
     "home.cta.work": "Lihat karyanya",
     "home.cta.long": "Baca versi panjangnya",
 
@@ -152,14 +152,14 @@ export const dict = {
     "work.eyebrow": "Dua puluh empat rilis",
     "work.title": "Semua yang punya URL aktif",
     "work.lede":
-      "Semua ini sudah ter-deploy dan bisa diakses. Yang berjalan di Solana devnet ditulis devnet, dan yang masih prototipe ditulis prototipe — perbedaan itu lebih penting daripada judulnya. Tangkapan layarnya nyata, bukan mockup.",
+      "Semua ini sudah ter-deploy dan bisa diakses. Yang berjalan di Solana devnet ditulis devnet, dan yang masih prototipe ditulis prototipe.",
 
     "journey.eyebrow": "2010 — sekarang",
     "journey.title": "Enam belas tahun dengan kebiasaan yang sama",
     "journey.lede":
       "Di atas kertas ini tampak seperti empat karier yang tidak berhubungan — esport, fotografi, karya NFT, rekayasa infrastruktur. Sebenarnya satu hal yang diulang. Temukan sekelompok orang yang belum ada yang membangunkan apa pun untuk mereka, lalu bangunkan sesuatu. Mediumnya berganti; refleksnya tidak.",
     "journey.note":
-      "Setiap entri di bawah menyebut di mana hal itu dinyatakan secara publik, jadi tidak ada yang perlu ditelan mentah-mentah.",
+      "Setiap entri menyebut di mana hal itu dinyatakan secara publik.",
 
     "archive.eyebrow": "Arsip",
     "archive.title": "Repositori di balik produk-produk itu",
@@ -170,9 +170,9 @@ export const dict = {
     "sources.eyebrow": "Diperiksa 14 Agustus 2026",
     "sources.title": "Setiap klaim, dan dari mana asalnya",
     "sources.lede":
-      "Portofolio adalah dokumen yang ditulis oleh orang yang diuntungkannya. Halaman ini ada supaya tidak ada satu pun bagiannya yang perlu dipercaya begitu saja: {fields} bidang data, masing-masing dilacak ke sumber publiknya dan ke halaman yang menampilkannya. Buka sumbernya, bandingkan, dan bantah kalau tidak cocok.",
+      "{fields} bidang data, masing-masing dilacak ke sumber publiknya dan ke halaman yang menampilkannya.",
     "sources.note":
-      "Halaman ini juga mencatat {omitted} hal yang ada di sumbernya tetapi sengaja tidak ditampilkan di situs ini, karena peta yang jujur harus memuat juga apa yang tidak dimasukkan.",
+      "Halaman ini juga mencatat {omitted} hal yang ada di sumbernya tetapi tidak ditampilkan di sini.",
 
     "photo.eyebrow": "Sejak {date}",
     "photo.title": "Satu bingkai sehari, lebih dari setahun",
