@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowUpRight, Search } from "lucide-react";
+import Image from "next/image";
 import { repos, deployedCount, undescribedCount } from "@/data/repos";
+import { repoCards } from "@/data/repo-cards";
 
 const FILTERS = [
   { id: "all", label: "All" },
@@ -89,8 +91,26 @@ export function RepoIndex() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.18 }}
-              className="grid grid-cols-[1fr_auto] items-baseline gap-x-5 gap-y-1 border-t border-line py-3.5 sm:grid-cols-[220px_1fr_auto]"
+              className="grid grid-cols-[1fr_auto] items-baseline gap-x-5 gap-y-1 border-t border-line py-3.5 sm:grid-cols-[92px_220px_1fr_auto]"
             >
+              {/* GitHub renders a card for every repository, so even the ones
+                  that were never deployed have a real image rather than none. */}
+              <div className="col-span-2 row-start-1 hidden sm:col-span-1 sm:block">
+                {repoCards.has(r.name) ? (
+                  <div className="relative aspect-[2/1] w-[92px] overflow-hidden rounded border border-line">
+                    <Image
+                      src={`/repo/${r.name}.webp`}
+                      alt={`GitHub card for ${r.name}`}
+                      fill
+                      sizes="92px"
+                      loading="lazy"
+                      className="object-cover opacity-70 transition-opacity duration-300 hover:opacity-100"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-[2/1] w-[92px] rounded border border-dashed border-line" />
+                )}
+              </div>
               <a
                 href={`https://github.com/bryankwandou/${r.name}`}
                 target="_blank"
