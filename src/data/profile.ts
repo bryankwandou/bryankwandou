@@ -191,15 +191,34 @@ export const education = [
  */
 export const research = {
   role: "Presenter",
+  /** The revised manuscript's title. The certificate carries the earlier
+   *  submission title, so the accepted version is the one shown. */
   paper:
-    "Weather-Aware Movie Recommendation System: A Human-Centered AI Approach to Enhancing User Experience in Digital Entertainment",
+    "Design and Usability Evaluation of a Weather-Aware Mobile Movie Recommendation System Using a Human-Centered AI Approach",
+  system: "NNG Cinema",
+  affiliation: "Informatics Engineering, Universitas Atma Jaya Makassar",
   venue: "3rd International Conference on Digital, Social, and Science (ICoDSS) 2026",
-  theme:
-    "Human-Centered AI for Shared Prosperity: Advancing Digital Systems, Social Transformation, and Scientific Inquiry",
   organiser: "PT Ebiz Prima Nusa",
   place: "Bandung, Indonesia",
   date: "23 July 2026",
   ref: "188/B-2/ICODSS/EBS/VII/2026",
+  summary:
+    "A Flutter client that reads the weather where you are and picks films from it, with no question asked of the user. Seven meteorological categories map onto genre clusters drawn from environmental psychology, and the app chains weather sensing to catalogue retrieval end to end.",
+  findings: [
+    { value: "80.33", label: "System Usability Scale mean", note: "SD 7.84, across 30 participants" },
+    { value: "24/24", label: "black-box test cases passed", note: "six categories, three cycles" },
+    { value: "+12.33", label: "points above the population median", note: "Good-to-Excellent usability band" },
+  ],
+  /** Stated in the paper itself, and worth carrying over rather than dropping. */
+  scope:
+    "The paper reports design feasibility and perceived usability. Recommendation accuracy, relevance, and satisfaction were not measured, and no comparative baseline was run.",
+  keywords: [
+    "context-aware recommender systems",
+    "Flutter",
+    "human-centered AI",
+    "mobile applications",
+    "weather-based recommendation",
+  ],
 } as const;
 
 // The first five come from the LinkedIn certifications section (Dicoding).
