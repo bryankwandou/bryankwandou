@@ -119,16 +119,6 @@ export default function About() {
               ))}
             </ul>
             <p className="meta mt-5">Dicoding, except where an issuer is named</p>
-
-            <h2 className="meta mt-10">Conference paper</h2>
-            <p className="mt-6 text-sm text-paper">{research.paper}</p>
-            <p className="mt-2 text-sm text-paper-dim">
-              {research.role} · {research.venue}
-            </p>
-            <p className="meta tnum mt-1.5">
-              {research.place} · {research.date}
-            </p>
-            <p className="meta mt-2">Ref {research.ref}</p>
           </Reveal>
 
           <Reveal delay={0.12}>
@@ -151,6 +141,64 @@ export default function About() {
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* The conference paper. It gets its own band rather than a line in the
+          certificates column, because a presented paper carries more weight
+          than anything else on this page. */}
+      <section className="border-t border-line px-5 py-20 sm:px-8 sm:py-28">
+        <div className="mx-auto max-w-[1180px]">
+          <Reveal>
+            <p className="meta">Peer-reviewed, presented</p>
+            <h2 className="display mt-6 max-w-[22ch] text-[clamp(1.9rem,4.2vw,2.8rem)] text-paper">
+              {research.paper}
+            </h2>
+          </Reveal>
+
+          <div className="mt-10 grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
+            <Reveal delay={0.06}>
+              <p className="prose-read text-lg">{research.summary}</p>
+              <p className="prose-read mt-5 text-sm">{research.scope}</p>
+              <div className="mt-7 flex flex-wrap gap-1.5">
+                {research.keywords.map((k) => (
+                  <span key={k} className="rounded border border-line px-2 py-1 text-xs text-paper-dim">
+                    {k}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.12}>
+              <StaggerList className="border-t border-line">
+                {research.findings.map((f) => (
+                  <StaggerItem key={f.label}>
+                    <div className="flex items-baseline justify-between gap-6 border-b border-line py-5">
+                      <div>
+                        <p className="text-sm text-paper">{f.label}</p>
+                        <p className="meta mt-1">{f.note}</p>
+                      </div>
+                      <p className="tnum shrink-0 text-2xl text-ember">{f.value}</p>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </StaggerList>
+              <dl className="mt-8 space-y-2.5">
+                {[
+                  ["System", research.system],
+                  ["Venue", research.venue],
+                  ["Held", `${research.place} · ${research.date}`],
+                  ["Affiliation", research.affiliation],
+                  ["Certificate", research.ref],
+                ].map(([k, v]) => (
+                  <div key={k} className="flex items-start justify-between gap-6">
+                    <dt className="meta shrink-0">{k}</dt>
+                    <dd className="text-right text-sm text-paper-dim">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
+          </div>
         </div>
       </section>
 
