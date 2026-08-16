@@ -184,13 +184,16 @@ export const education = [
   },
 ];
 
-// Source: LinkedIn certifications section (Dicoding).
+// The first five come from the LinkedIn certifications section (Dicoding).
+// The sixth is a webinar certificate pinned to the profile's Featured section
+// rather than filed under certifications, so it is named with its issuer.
 export const certifications = [
   "Belajar Dasar Data Science",
   "Belajar Dasar UX Design",
   "Prompt Engineering untuk Software Developer",
   "Memulai Pemrograman dengan Python",
   "Belajar Back-End Pemula dengan Python",
+  "GEMAR X IDN — Mengangkat Realita ke Layar (Yayasan GEMAR Indonesia, Aug 2026)",
 ];
 
 // Source: LinkedIn top skills, plus languages observed across the public repos.
