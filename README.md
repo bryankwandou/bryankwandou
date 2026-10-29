@@ -41,7 +41,7 @@ Every system below enforces deterministic authority boundaries in front of auton
 ### Flagship Systems (6 of the 24 Products)
 
 <details open>
-<summary><b>1. Veylock — Agentic Intelligence vs Spending Authority Separation</b></summary>
+<summary><b>1. Veylock — Segregated Agent Execution &amp; Spending Authority</b></summary>
 <br/>
 
 <div align="center">
@@ -59,22 +59,7 @@ Every system below enforces deterministic authority boundaries in front of auton
 </details>
 
 <details>
-<summary><b>2. Vowrail — Autonomous Agent Transaction Firewall</b></summary>
-<br/>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/shots/vowrail-1.webp" alt="Vowrail Interface" width="100%" style="border-radius: 8px; border: 1px solid #262629;" />
-</div>
-
-- **Problem**: Most autonomous agent demos depend on system prompt disclaimers with zero verifiable security posture.
-- **Solution**: A pre-flight transaction firewall. Every agent dispatch undergoes formal static policy validation, producing cryptographic decision proofs.
-- **Stack**: Next.js, TypeScript, Solana, Anchor
-- **Status**: Live on Solana Devnet
-- **Links**: [Live Deployment](https://vowrail.vercel.app) · [GitHub Repository](https://github.com/bryankwandou/vowrail)
-</details>
-
-<details>
-<summary><b>3. X402Gate — HTTP 402 Pay-Per-Call Settlement Gateway</b></summary>
+<summary><b>2. X402Gate — Pay-Per-Call HTTP 402 Billing for Machine Clients</b></summary>
 <br/>
 
 <div align="center">
@@ -89,7 +74,7 @@ Every system below enforces deterministic authority boundaries in front of auton
 </details>
 
 <details>
-<summary><b>4. AccordOS — Multi-Agent Bilateral B2B Negotiation Protocol</b></summary>
+<summary><b>3. AccordOS — Deterministic Bilateral Multi-Agent Negotiation</b></summary>
 <br/>
 
 <div align="center">
@@ -103,31 +88,45 @@ Every system below enforces deterministic authority boundaries in front of auton
 </details>
 
 <details>
-<summary><b>5. NavisFreight — Autonomous Freight Invoice & Dispatch Reconciliation</b></summary>
+<summary><b>4. VisitRail — Verifiable Healthcare &amp; Home-Care Operations</b></summary>
 <br/>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/shots/navisfreight-1.webp" alt="NavisFreight Interface" width="100%" style="border-radius: 8px; border: 1px solid #262629;" />
+  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/shots/visitrail-1.webp" alt="VisitRail Interface" width="100%" style="border-radius: 8px; border: 1px solid #262629;" />
 </div>
 
-- **Problem**: High friction and post-facto billing disputes across logistics, carrier dispatches, and fuel surcharges.
-- **Solution**: Smart reconciliation ledger binding bills of lading to verifiable escrow checkpoints.
-- **Stack**: Next.js, TypeScript, Automated Auditing Engine
-- **Links**: [Live Deployment](https://navisfreight.vercel.app) · [GitHub Repository](https://github.com/bryankwandou/navisfreight)
+- **Problem**: Sensitive home-care visit allocations require zero-failure auditing and strict schedule verification.
+- **Solution**: Operational visit validation and verifiable audit logging. Tracks clinician mandates, shift check-ins, and automated payment escrow.
+- **Stack**: Next.js, TypeScript, Healthcare Operations
+- **Links**: [Live Deployment](https://visitrail.vercel.app) · [GitHub Repository](https://github.com/bryankwandou/visitrail)
 </details>
 
 <details>
-<summary><b>6. AuraCare — Deterministic Caregiver Dispatch & Policy Guardrails</b></summary>
+<summary><b>5. Kinferry — Non-Custodial Remittance Preparation Agent</b></summary>
 <br/>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/shots/auracare-1.webp" alt="AuraCare Interface" width="100%" style="border-radius: 8px; border: 1px solid #262629;" />
+  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/shots/kinferry-1.webp" alt="Kinferry Interface" width="100%" style="border-radius: 8px; border: 1px solid #262629;" />
 </div>
 
-- **Problem**: Sensitive home care allocations require zero-failure auditing and strict schedule verification.
-- **Solution**: High-assurance verification system tracking shift check-ins, medical mandates, and automated payment escrow.
-- **Stack**: Next.js, TypeScript, Healthcare Operations
-- **Links**: [Live Deployment](https://auracare-health.vercel.app) · [GitHub Repository](https://github.com/bryankwandou/auracare-health)
+- **Problem**: Cross-border family remittance involves predatory exchange spreads and opaque custodial intermediaries.
+- **Solution**: Non-custodial cross-border remittance agent. Prepares routing corridors, compares liquidity pools, and signs transfers directly from the sender's own non-custodial wallet.
+- **Stack**: Next.js, TypeScript, Solana
+- **Links**: [Live Deployment](https://kinferry.vercel.app) · [GitHub Repository](https://github.com/bryankwandou/kinferry)
+</details>
+
+<details>
+<summary><b>6. ServeTrace — Real-Time Kitchen Safety &amp; Active Compliance Blocking</b></summary>
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/shots/servetrace-1.webp" alt="ServeTrace Interface" width="100%" style="border-radius: 8px; border: 1px solid #262629;" />
+</div>
+
+- **Problem**: Restaurant food safety logs are filled after shifts from memory rather than audited at point of risk.
+- **Solution**: Real-time kitchen safety controls with active compliance blocking. Shifts cannot be finalized and inventory cannot be transferred until hazard point readings pass formal rules.
+- **Stack**: Next.js, TypeScript, Food Safety Compliance
+- **Links**: [Live Deployment](https://servetrace.vercel.app) · [GitHub Repository](https://github.com/bryankwandou/servetrace)
 </details>
 
 ---
@@ -140,26 +139,26 @@ Every system below enforces deterministic authority boundaries in front of auton
 | **Vowrail** | Agent Security | Pre-flight Tx Firewall · Static Policy Gate | [Live App](https://vowrail.vercel.app) | [Repo](https://github.com/bryankwandou/vowrail) |
 | **X402Gate** | Agent Payments | HTTP 402 Settlement Gateway · Solana Devnet | [Live App](https://x402gate.vercel.app) | [Repo](https://github.com/bryankwandou/x402gate) |
 | **AccordOS** | B2B Negotiation | Deterministic Deal State Machine · Dual Signature | [Live App](https://accordos-ai.vercel.app) | [Repo](https://github.com/bryankwandou/accordos-ai) |
-| **NavisFreight** | Freight Logistics | Automated Escrow Checkpoints · BoL Audit | [Live App](https://navisfreight.vercel.app) | [Repo](https://github.com/bryankwandou/navisfreight) |
-| **AuraCare** | Healthcare Operations | Zero-Failure Shift Verification · Escrow | [Live App](https://auracare-health.vercel.app) | [Repo](https://github.com/bryankwandou/auracare-health) |
-| **Kinderguard** | Childcare Safety | Immutable Access Control Logs · Emergency Protocol | [Live App](https://kinderguard.vercel.app) | [Repo](https://github.com/bryankwandou/kinderguard) |
-| **Wayroute** | Logistics Routing | Real-time Telemetry Verification · Route Escrow | [Live App](https://wayroute.vercel.app) | [Repo](https://github.com/bryankwandou/wayroute) |
-| **Drayage** | Harbor Operations | Port Dispatch & Container Turnstile Tracking | [Live App](https://drayage-ops.vercel.app) | [Repo](https://github.com/bryankwandou/drayage-ops) |
-| **Civica** | Municipal Services | Public Infrastructure Complaint Audit Log | [Live App](https://civica-gov.vercel.app) | [Repo](https://github.com/bryankwandou/civica-gov) |
-| **VaultPulse** | Treasury Monitoring | Multisig Treasury Health & Invariant Checker | [Live App](https://vaultpulse.vercel.app) | [Repo](https://github.com/bryankwandou/vaultpulse) |
-| **PromptLens** | LLM Observability | Deterministic Token & Cost Attribution Ledger | [Live App](https://promptlens.vercel.app) | [Repo](https://github.com/bryankwandou/promptlens) |
-| **Luminar** | Creative Media | Digital Photography Culling & Provenance | [Live App](https://luminar-photo.vercel.app) | [Repo](https://github.com/bryankwandou/luminar-photo) |
-| **TrustMesh** | Identity Protocol | Cryptographic Attestation & Web of Trust | [Live App](https://trustmesh.vercel.app) | [Repo](https://github.com/bryankwandou/trustmesh) |
-| **ArbitrageEye** | DEX Analytics | On-chain Liquidity Spread & Slippage Guard | [Live App](https://arbitrage-eye.vercel.app) | [Repo](https://github.com/bryankwandou/arbitrage-eye) |
-| **SentryLedger** | Security Auditing | Smart Contract Invariant Verification | [Live App](https://sentryledger.vercel.app) | [Repo](https://github.com/bryankwandou/sentryledger) |
-| **SolFlow** | Workflow Engine | DAG-based Autonomous Agent Step Engine | [Live App](https://solflow-ops.vercel.app) | [Repo](https://github.com/bryankwandou/solflow-ops) |
-| **FleetAnchor** | IoT Verification | Cryptographic Firmware & Telematics Audit | [Live App](https://fleetanchor.vercel.app) | [Repo](https://github.com/bryankwandou/fleetanchor) |
-| **CargoTrace** | Supply Chain | End-to-end QR & Barcode Tamper-proof Registry | [Live App](https://cargotrace.vercel.app) | [Repo](https://github.com/bryankwandou/cargotrace) |
-| **ApexTerminal** | Financial UI | Low-latency WebSockets Orderbook & Analytics | [Live App](https://apexterminal.vercel.app) | [Repo](https://github.com/bryankwandou/apexterminal) |
-| **ChronosAI** | Time Allocation | Automated Scheduling under Strict Policy Limits | [Live App](https://chronos-ai.vercel.app) | [Repo](https://github.com/bryankwandou/chronos-ai) |
-| **RelayShield** | Webhook Security | Signature Verification & Replay Attack Blocker | [Live App](https://relayshield.vercel.app) | [Repo](https://github.com/bryankwandou/relayshield) |
-| **BeaconMesh** | Emergency Relay | Distributed Signal Routing & Verification | [Live App](https://beaconmesh.vercel.app) | [Repo](https://github.com/bryankwandou/beaconmesh) |
-| **ByteAudit** | Binary Analysis | Reverse Engineering & Attestation Explorer | [Live App](https://byteaudit.vercel.app) | [Repo](https://github.com/bryankwandou/byteaudit) |
+| **AgentPayOS** | Machine Payments | Streaming Escrow &amp; Sub-cent Metering | [Live App](https://agentpayos.vercel.app) | [Repo](https://github.com/bryankwandou/agentpayos) |
+| **Kinferry** | Remittance | Non-Custodial Cross-Border Route Preparation | [Live App](https://kinferry.vercel.app) | [Repo](https://github.com/bryankwandou/kinferry) |
+| **VisitRail** | Healthcare Ops | Verifiable Clinical Visit &amp; Schedule Logging | [Live App](https://visitrail.vercel.app) | [Repo](https://github.com/bryankwandou/visitrail) |
+| **ServeTrace** | Safety Compliance | Real-Time Hazard Point Active Blocker | [Live App](https://servetrace.vercel.app) | [Repo](https://github.com/bryankwandou/servetrace) |
+| **FreightLatch** | Freight Logistics | Automated Escrow Checkpoints · BoL Audit | [Live App](https://freightlatch.vercel.app) | [Repo](https://github.com/bryankwandou/freightlatch) |
+| **AxleVeto** | Commercial Fleet | Pre-dispatch Safety Signoff &amp; Compliance | [Live App](https://axleveto.vercel.app) | [Repo](https://github.com/bryankwandou/axleveto) |
+| **ChildcareOS** | Childcare Safety | Immutable Access Control Logs · Emergency Protocol | [Live App](https://childcareos.vercel.app) | [Repo](https://github.com/bryankwandou/childcareos) |
+| **DwellNerve** | Tenant Facilities | Sensor-linked Maintenance Verification Escrow | [Live App](https://dwellnerve.vercel.app) | [Repo](https://github.com/bryankwandou/dwellnerve) |
+| **StewardLane** | Property Operations | Vendor Dispute Resolution &amp; Service Receipts | [Live App](https://stewardlane.vercel.app) | [Repo](https://github.com/bryankwandou/stewardlane) |
+| **DissentGrid** | Governance | Cryptographic Dissent Logging &amp; Stake Voting | [Live App](https://dissentgrid.vercel.app) | [Repo](https://github.com/bryankwandou/dissentgrid) |
+| **MirrorQA** | AI Evaluation | Synthetic Conversation Perturbation &amp; Audit | [Live App](https://mirrorqa-ai.vercel.app) | [Repo](https://github.com/bryankwandou/mirrorqa-ai) |
+| **AutoRepairOS** | Workshop Billing | Parts Chain of Custody &amp; Telematics Quote | [Live App](https://autorepairos.vercel.app) | [Repo](https://github.com/bryankwandou/autorepairos) |
+| **BriefRail** | Legal Operations | Privilege Log Immutability &amp; Review Gating | [Live App](https://briefrail.vercel.app) | [Repo](https://github.com/bryankwandou/briefrail) |
+| **GalleryOS** | Art Provenance | On-chain Exhibition History &amp; Royalty Enforcer | [Live App](https://galleryos.vercel.app) | [Repo](https://github.com/bryankwandou/galleryos) |
+| **EverCue** | Clinical Trials | Patient Schedule Protocol &amp; Compliance Audit | [Live App](https://evercue.vercel.app) | [Repo](https://github.com/bryankwandou/evercue) |
+| **CiviFlow** | Municipal Services | Public Infrastructure Complaint Audit Log | [Live App](https://civiflow.vercel.app) | [Repo](https://github.com/bryankwandou/civiflow) |
+| **VeriStart** | KYC Onboarding | Zero-Knowledge Identity Verification Pipeline | [Live App](https://veristart.vercel.app) | [Repo](https://github.com/bryankwandou/veristart) |
+| **Stemloom** | Audio Workstation | In-browser Multitrack DSP &amp; Export Engine | [Live App](https://stemloom.vercel.app) | [Repo](https://github.com/bryankwandou/stemloom) |
+| **Cutwright** | Video Production | Browser Canvas &amp; WebCodecs Timeline Suite | [Live App](https://cutwright.vercel.app) | [Repo](https://github.com/bryankwandou/cutwright) |
+| **AvalRail** | Payment Routing | Durable Nonce Replay Defense &amp; Gas Abstraction | [Live App](https://aval-rail.vercel.app) | [Repo](https://github.com/bryankwandou/aval-rail) |
 
 ---
 
