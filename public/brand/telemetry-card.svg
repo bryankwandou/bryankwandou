@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="100%" height="200">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0e" />
+      <stop offset="50%" stop-color="#121215" />
+      <stop offset="100%" stop-color="#0c0c0e" />
+    </linearGradient>
+    <linearGradient id="barTs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3178C6" />
+      <stop offset="100%" stop-color="#235a97" />
+    </linearGradient>
+    <linearGradient id="barRust" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E4703A" />
+      <stop offset="100%" stop-color="#C25524" />
+    </linearGradient>
+    <linearGradient id="barSol" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14F195" />
+      <stop offset="100%" stop-color="#0dbd73" />
+    </linearGradient>
+    <linearGradient id="barOther" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8957e5" />
+      <stop offset="100%" stop-color="#693bb8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="900" height="200" rx="14" fill="url(#cardBg)" stroke="#262629" stroke-width="1.5" />
+
+  <!-- Section Header -->
+  <text x="36" y="36" fill="#787880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="11" font-weight="700" letter-spacing="1.5">VERIFIED ENGINEERING TELEMETRY</text>
+  <line x1="36" y1="46" x2="864" y2="46" stroke="#262629" stroke-width="1" />
+
+  <!-- 4 Stats Columns -->
+  <!-- Col 1 -->
+  <g transform="translate(36, 62)">
+    <text x="0" y="32" fill="#f3f3f1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">24</text>
+    <text x="0" y="52" fill="#E4703A" font-family="monospace" font-size="11" font-weight="600">SHIPPED PRODUCTS</text>
+    <text x="0" y="68" fill="#787880" font-family="sans-serif" font-size="11">Production &amp; devnet live</text>
+  </g>
+
+  <!-- Col 2 -->
+  <g transform="translate(240, 62)">
+    <text x="0" y="32" fill="#f3f3f1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">100%</text>
+    <text x="0" y="52" fill="#14F195" font-family="monospace" font-size="11" font-weight="600">DETERMINISTIC GATES</text>
+    <text x="0" y="68" fill="#787880" font-family="sans-serif" font-size="11">Zero prompt-only security</text>
+  </g>
+
+  <!-- Col 3 -->
+  <g transform="translate(450, 62)">
+    <text x="0" y="32" fill="#f3f3f1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">6</text>
+    <text x="0" y="52" fill="#3178C6" font-family="monospace" font-size="11" font-weight="600">ANCHOR / SOLANA PDAS</text>
+    <text x="0" y="68" fill="#787880" font-family="sans-serif" font-size="11">On-chain receipts &amp; vaults</text>
+  </g>
+
+  <!-- Col 4 -->
+  <g transform="translate(680, 62)">
+    <text x="0" y="32" fill="#f3f3f1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">50+</text>
+    <text x="0" y="52" fill="#f3f3f1" font-family="monospace" font-size="11" font-weight="600">OPEN REPOSITORIES</text>
+    <text x="0" y="68" fill="#787880" font-family="sans-serif" font-size="11">Open-source &amp; verified code</text>
+  </g>
+
+  <!-- Language Stack Bar (bottom) -->
+  <g transform="translate(36, 148)">
+    <text x="0" y="0" fill="#787880" font-family="monospace" font-size="10" font-weight="600" letter-spacing="1">PRIMARY ARCHITECTURAL STACK</text>
+    
+    <!-- Progress Bar -->
+    <rect x="0" y="8" width="828" height="8" rx="4" fill="#18181c" />
+    <rect x="0" y="8" width="348" height="8" rx="4" fill="url(#barTs)" />
+    <rect x="348" y="8" width="248" height="8" fill="url(#barRust)" />
+    <rect x="596" y="8" width="132" height="8" fill="url(#barSol)" />
+    <rect x="728" y="8" width="100" height="8" rx="4" fill="url(#barOther)" />
+
+    <!-- Bar Legend -->
+    <g transform="translate(0, 30)">
+      <circle cx="5" cy="4" r="3.5" fill="#3178C6" />
+      <text x="14" y="8" fill="#f3f3f1" font-family="monospace" font-size="11">TypeScript 42%</text>
+
+      <circle cx="160" cy="4" r="3.5" fill="#E4703A" />
+      <text x="169" y="8" fill="#f3f3f1" font-family="monospace" font-size="11">Rust 30%</text>
+
+      <circle cx="280" cy="4" r="3.5" fill="#14F195" />
+      <text x="289" y="8" fill="#f3f3f1" font-family="monospace" font-size="11">Solana / Anchor 16%</text>
+
+      <circle cx="460" cy="4" r="3.5" fill="#8957e5" />
+      <text x="469" y="8" fill="#f3f3f1" font-family="monospace" font-size="11">Wasm / Python 12%</text>
+    </g>
+  </g>
+</svg>

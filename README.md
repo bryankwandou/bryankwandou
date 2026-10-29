@@ -1,10 +1,10 @@
 <div align="center">
-
-# BRYAN KWANDOU
-### Autonomous Systems Architect & Agentic Security Engineer
-**Makassar, Indonesia · Systems Engineering · On-Chain Policy Verification**
+  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/brand/hero-banner.svg" alt="Bryan Kwandou Systems Architecture" width="100%" />
+</div>
 
 <br/>
+
+<div align="center">
 
 [![Live Web Portfolio](https://img.shields.io/badge/LIVE_WEB_PORTFOLIO-bryankwandou.vercel.app-E4703A?style=for-the-badge&logo=vercel&logoColor=white)](https://bryankwandou.vercel.app)
 [![GitHub Pages Mirror](https://img.shields.io/badge/GITHUB_PAGES-bryankwandou.github.io-10B981?style=for-the-badge&logo=github&logoColor=white)](https://bryankwandou.github.io/bryankwandou/)
@@ -30,11 +30,10 @@ Every system below enforces deterministic authority boundaries in front of auton
 
 ---
 
-### Engineering Telemetry & Activity
+### Verified Engineering Telemetry
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=bryankwandou&show_icons=true&theme=tokyonight&bg_color=0c0c0e&title_color=E4703A&text_color=f3f3f1&icon_color=E4703A&border_color=262629&hide_border=false" alt="Bryan Kwandou GitHub Statistics" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bryankwandou&layout=compact&theme=tokyonight&bg_color=0c0c0e&title_color=E4703A&text_color=f3f3f1&border_color=262629&hide_border=false" alt="Top Engineering Languages" width="48%" />
+  <img src="https://raw.githubusercontent.com/bryankwandou/bryankwandou/main/public/brand/telemetry-card.svg" alt="Verified Engineering Telemetry" width="100%" />
 </div>
 
 ---
