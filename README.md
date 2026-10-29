@@ -1,87 +1,71 @@
-<h1 align="center">Bryan Kwandou</h1>
+<div align="center">
 
-<p align="center">
-  <a href="https://bryankwandou.vercel.app"><b>bryankwandou.vercel.app</b></a>
-</p>
+# Bryan Kwandou
+### Mobile & Web Developer | Solana • Flutter • TypeScript • AI
 
-<p align="center">
-  Builder in Makassar, Indonesia. I write software that leaves a trail — twenty-one
-  shipped products and 104 public repositories, most of them circling one question:
-  after the machine acts, can a person still check what happened?
-</p>
+Makassar / Jayapura, Indonesia
 
-<p align="center">
-  <a href="https://linkedin.com/in/bryankwandou">LinkedIn</a> ·
-  <a href="https://instagram.com/bryan_kwandou">Instagram</a> ·
-  <a href="https://threads.com/@bryan_kwandou">Threads</a> ·
-  <a href="https://tiktok.com/@nayrbryanGaming">TikTok</a> ·
-  <a href="https://x.com/nayrbryanGaming">X</a> ·
-  <a href="https://orcid.org/0009-0009-1652-0995">ORCID</a>
-</p>
+[![Website](https://img.shields.io/badge/Portfolio-bryankwandou.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://bryankwandou.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-bryankwandou-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/bryankwandou)
+[![TikTok](https://img.shields.io/badge/TikTok-@nayrbryanGaming-000000?style=flat&logo=tiktok&logoColor=white)](https://tiktok.com/@nayrbryanGaming)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0009--1652--0995-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-1652-0995)
+[![X](https://img.shields.io/badge/X-nayrbryanGaming-000000?style=flat&logo=x&logoColor=white)](https://x.com/nayrbryanGaming)
+
+<br/>
+
+```
+Builder in Makassar, Indonesia. Focused on verifiable software architecture, 
+agent autonomy boundaries, and robust decentralized application tooling.
+```
 
 ---
 
-## What I am doing now
+### Tech Stack & Tooling
 
-- Campus Lead and founder, **UAJM Blockchain Club — Superteam Campus**
-- Founder and Chairman, **UKM E-Sport Universitas Atma Jaya Makassar** (Rector Decree 032/UAJM/Rek/Kep/VI/2025)
-- NFT creator on **Drip.Haus** since 2024, and on **Tezos** since 2022
-- Reading Teknik Informatika at **Universitas Atma Jaya Makassar**
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat&logo=solana&logoColor=white)](https://solana.com/)
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)](https://dart.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-## Selected work
+</div>
 
-| Product | What it does | Status |
+---
+
+### Selected Production & Devnet Systems
+
+| Product | Architecture & Function | Target / Stack |
 |---|---|---|
-| [Veylock](https://veylock.vercel.app) | Keeps an agent's intelligence and its spending authority in separate boxes | Solana devnet |
-| [X402Gate](https://x402gate.vercel.app) | Pay-per-call billing for machine clients, using the HTTP 402 status nobody shipped | Solana devnet |
-| [AccordOS](https://accordos-ai.vercel.app) | Two agents negotiate; neither can exceed the authority a human granted | Solana devnet |
-| [VisitRail](https://visitrail.vercel.app) | Home care operations where the visit record is evidence, not a claim | Solana devnet |
-| [Kinferry](https://kinferry.vercel.app) | A remittance agent that prepares transfers but never decides who is trusted | Solana devnet |
-| [ServeTrace](https://servetrace.vercel.app) | Restaurant safety controls that block the unsafe action instead of logging it | Solana devnet |
-| [aval-rail](https://github.com/bryankwandou/aval-rail) | A durable nonce held a payment open 4h29m past its control window, on devnet | Solana devnet |
-| [aval-core](https://github.com/bryankwandou/aval-core) | Solana substrate with no SDK under it, targeting `wasm32-wasip2` plugins | Rust |
-
-The full set of twenty-one is at [bryankwandou.vercel.app/work](https://bryankwandou.vercel.app/work),
-and the eighty-odd unpolished repositories are catalogued at
-[/archive](https://bryankwandou.vercel.app/archive).
-
-## Working in
-
-`TypeScript` `Rust` `Solana` `Anchor` `Next.js` `Flutter` `Dart` `Python` `Postgres` `Solidity`
+| [Veylock](https://veylock.vercel.app) | Segregated agent execution intelligence and spending authority | Solana devnet / TypeScript |
+| [X402Gate](https://x402gate.vercel.app) | HTTP 402 pay-per-call metering and settlement engine | Solana devnet / Next.js |
+| [AccordOS](https://accordos-ai.vercel.app) | Multi-agent autonomous contract and bilateral negotiation framework | Solana devnet / AI |
+| [VisitRail](https://visitrail.vercel.app) | Operational visit validation and verifiable audit logging | Solana devnet / Web |
+| [Kinferry](https://kinferry.vercel.app) | Non-custodial remittance preparation and settlement agent | Solana devnet / TypeScript |
+| [ServeTrace](https://servetrace.vercel.app) | Real-time restaurant safety controls and active compliance blocking | Solana devnet / Next.js |
+| [aval-rail](https://github.com/bryankwandou/aval-rail) | Durable nonce handling payment persistence past control window | Solana devnet / TypeScript |
+| [aval-core](https://github.com/bryankwandou/aval-core) | Solana substrate targeting wasm32-wasip2 modular execution plugins | Rust / WASM |
 
 ---
 
-## About this repository
+### Current Engagements & Background
 
-This repo holds the source for the site at
-[bryankwandou.vercel.app](https://bryankwandou.vercel.app). It is a static Next.js
-build — no database, no API routes, no client-side data fetching. Every fact on the
-site is committed to the repository and traceable to a public source.
+- Campus Lead and Founder, **UAJM Blockchain Club — Superteam Campus**
+- Founder and Chairman, **UKM E-Sport Universitas Atma Jaya Makassar** (Rector Decree 032/UAJM/Rek/Kep/VI/2025)
+- NFT Creator on **Drip.Haus** (Solana) and **Tezos**
+- Informatics Engineering Scholar, **Universitas Atma Jaya Makassar**
 
-**Stack:** Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Motion.
-Instrument Serif for display, Geist Sans and Geist Mono for everything else.
+---
 
-**Layout**
+### GitHub Activity Metrics
 
-```
-src/
-  app/                 routes; every page prerendered at build time
-  components/          logo, header, footer, motion primitives
-  data/                profile.ts, work.ts, archive.ts — the entire content layer
-public/
-  logos/               21 product marks
-  shots/               84 real interface captures
-brand.md               colour, type, motion, and voice decisions
-```
+<div align="center">
 
-**Running it**
+<img src="https://github-readme-stats.vercel.app/api?username=bryankwandou&show_icons=true&theme=tokyonight&hide_border=true" alt="Bryan Kwandou GitHub Stats" />
+<br/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bryankwandou&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 
-```bash
-npm install
-npm run dev      # http://localhost:3000
-npm run build    # static export of 32 routes
-```
-
-The design decisions — why the accent is ember rather than the usual violet, why
-entry animations run longer than exits, why status labels say "devnet" rather than
-something friendlier — are written down in [`brand.md`](./brand.md).
+</div>
