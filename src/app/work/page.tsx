@@ -6,6 +6,7 @@ import { work } from "@/data/work";
 import { Reveal, StaggerList, StaggerItem } from "@/components/motion-primitives";
 import { T } from "@/components/lang-provider";
 import { StatusTag } from "@/components/status-tag";
+import { asset } from "@/data/asset";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -39,7 +40,7 @@ export default function WorkIndex() {
                   <Link href={`/work/${w.slug}`} className="block">
                     <div className="relative aspect-[16/11] overflow-hidden rounded-md border border-line bg-ink-raised">
                       <Image
-                        src={`/shots/${w.slug}-1.webp`}
+                        src={asset(`/shots/${w.slug}-1.webp`)}
                         alt={`${w.name} interface`}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
@@ -51,7 +52,7 @@ export default function WorkIndex() {
 
                     <div className="mt-5 flex items-start gap-3">
                       <Image
-                        src={`/logos/${w.slug}.svg`}
+                        src={asset(`/logos/${w.slug}.svg`)}
                         alt=""
                         width={34}
                         height={34}

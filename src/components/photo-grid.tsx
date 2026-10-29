@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowUpRight, X } from "lucide-react";
 import { photos, objktUrl } from "@/data/photos";
+import { asset } from "@/data/asset";
 
 export function PhotoGrid() {
   const [open, setOpen] = useState<number | null>(null);
@@ -49,7 +50,7 @@ export function PhotoGrid() {
             aria-label={`${p.title}, ${p.date}`}
           >
             <Image
-              src={`/photos/${p.src}`}
+              src={asset(`/photos/${p.src}`)}
               alt={p.title}
               width={1400}
               height={933}
@@ -102,7 +103,7 @@ export function PhotoGrid() {
                 className="relative max-h-full"
               >
                 <Image
-                  src={`/photos/${current.src}`}
+                  src={asset(`/photos/${current.src}`)}
                   alt={current.title}
                   width={1400}
                   height={933}

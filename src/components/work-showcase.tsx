@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import type { Work } from "@/data/work";
 import { StatusTag } from "./status-tag";
+import { asset } from "@/data/asset";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -86,7 +87,7 @@ export function WorkShowcase({ items }: { items: Work[] }) {
                 transition={{ duration: 0.34, ease: EASE }}
               >
                 <Image
-                  src={`/shots/${current.slug}-1.webp`}
+                  src={asset(`/shots/${current.slug}-1.webp`)}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 520px"

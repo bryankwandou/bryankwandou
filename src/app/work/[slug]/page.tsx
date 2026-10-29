@@ -8,6 +8,7 @@ import { proofs } from "@/data/proof";
 import { Reveal } from "@/components/motion-primitives";
 import { StatusTag } from "@/components/status-tag";
 import { ProofPanel } from "@/components/proof-panel";
+import { asset } from "@/data/asset";
 
 export function generateStaticParams() {
   return work.map((w) => ({ slug: w.slug }));
@@ -69,7 +70,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
             <Reveal>
               <div className="flex items-center gap-4">
                 <Image
-                  src={`/logos/${w.slug}.svg`}
+                  src={asset(`/logos/${w.slug}.svg`)}
                   alt=""
                   width={54}
                   height={54}
@@ -169,7 +170,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
                 }`}
               >
                 <Image
-                  src={`/shots/${w.slug}-${n}.webp`}
+                  src={asset(`/shots/${w.slug}-${n}.webp`)}
                   alt={`${w.name}, screen ${n} of ${w.shots}`}
                   width={1600}
                   height={1000}
